@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "build:cli": "esbuild scripts/hp-cli.ts --bundle --platform=node --format=esm --loader:.webp=dataurl --define:import.meta.env.DEV=false \"--banner:js=import { createRequire } from 'module'; const require = createRequire(import.meta.url);\" --outfile=scripts/hp-cli.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.110.0",
