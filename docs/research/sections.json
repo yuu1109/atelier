@@ -1,0 +1,892 @@
+{
+  "siteTypes": [
+    {
+      "id": "lp",
+      "name": "ランディングページ",
+      "en": "Landing Page",
+      "desc": "単一商品・キャンペーンの申込獲得に特化した1枚完結ページ",
+      "preset": [
+        "header-nav",
+        "hero",
+        "problem",
+        "solution",
+        "features",
+        "benefits",
+        "testimonials",
+        "comparison",
+        "campaign",
+        "pricing",
+        "guarantee",
+        "flow",
+        "faq",
+        "cta",
+        "contact",
+        "footer"
+      ]
+    },
+    {
+      "id": "corporate",
+      "name": "コーポレートサイト",
+      "en": "Corporate Site",
+      "desc": "企業の信頼形成と事業紹介を担う公式サイト",
+      "preset": [
+        "header-nav",
+        "hero",
+        "news",
+        "service-list",
+        "features",
+        "case-study",
+        "concept",
+        "message",
+        "stats",
+        "about",
+        "history",
+        "blog",
+        "recruit-message",
+        "cta",
+        "contact",
+        "access",
+        "footer"
+      ]
+    },
+    {
+      "id": "clinic",
+      "name": "治療院・クリニック",
+      "en": "Clinic / Therapy",
+      "desc": "整骨院・接骨院・整体院・歯科などの来院予約獲得サイト",
+      "preset": [
+        "header-nav",
+        "hero",
+        "problem",
+        "features",
+        "campaign",
+        "menu",
+        "pricing",
+        "before-after",
+        "testimonials",
+        "message",
+        "team",
+        "gallery",
+        "flow",
+        "faq",
+        "access",
+        "reservation",
+        "footer"
+      ]
+    },
+    {
+      "id": "restaurant",
+      "name": "飲食店",
+      "en": "Restaurant",
+      "desc": "料理・空間の魅力を伝え来店・予約につなげる店舗サイト",
+      "preset": [
+        "header-nav",
+        "hero",
+        "concept",
+        "features",
+        "menu",
+        "gallery",
+        "news",
+        "sns-feed",
+        "access",
+        "reservation",
+        "footer"
+      ]
+    },
+    {
+      "id": "salon",
+      "name": "美容室・サロン",
+      "en": "Beauty Salon",
+      "desc": "美容室・エステ・ネイルなどの世界観訴求と予約獲得サイト",
+      "preset": [
+        "header-nav",
+        "hero",
+        "concept",
+        "features",
+        "campaign",
+        "menu",
+        "pricing",
+        "gallery",
+        "team",
+        "testimonials",
+        "sns-feed",
+        "flow",
+        "faq",
+        "access",
+        "reservation",
+        "footer"
+      ]
+    },
+    {
+      "id": "professional",
+      "name": "士業事務所",
+      "en": "Professional Firm",
+      "desc": "弁護士・税理士・行政書士などの相談獲得・信頼形成サイト",
+      "preset": [
+        "header-nav",
+        "hero",
+        "problem",
+        "features",
+        "service-list",
+        "pricing",
+        "case-study",
+        "testimonials",
+        "profile",
+        "team",
+        "flow",
+        "faq",
+        "about",
+        "access",
+        "cta",
+        "contact",
+        "footer"
+      ]
+    },
+    {
+      "id": "recruit",
+      "name": "採用サイト",
+      "en": "Recruiting Site",
+      "desc": "求職者への魅力訴求とエントリー獲得に特化したサイト",
+      "preset": [
+        "header-nav",
+        "hero",
+        "recruit-message",
+        "stats",
+        "about",
+        "interview",
+        "culture",
+        "job-openings",
+        "flow",
+        "faq",
+        "cta",
+        "footer"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "name": "ポートフォリオ",
+      "en": "Portfolio",
+      "desc": "クリエイター・フリーランスの作品掲示と受注導線サイト",
+      "preset": [
+        "header-nav",
+        "hero",
+        "works",
+        "profile",
+        "service-list",
+        "testimonials",
+        "blog",
+        "sns-feed",
+        "contact",
+        "footer"
+      ]
+    },
+    {
+      "id": "saas",
+      "name": "SaaS・プロダクト",
+      "en": "SaaS / Product",
+      "desc": "ソフトウェア製品の理解促進とトライアル登録獲得サイト",
+      "preset": [
+        "header-nav",
+        "hero",
+        "logos-media",
+        "problem",
+        "features",
+        "demo-video",
+        "benefits",
+        "integration",
+        "case-study",
+        "testimonials",
+        "pricing",
+        "comparison",
+        "faq",
+        "blog",
+        "cta",
+        "footer"
+      ]
+    },
+    {
+      "id": "ec",
+      "name": "ECサイト",
+      "en": "E-commerce",
+      "desc": "商品の回遊・購入を促すオンラインショップのトップ構成",
+      "preset": [
+        "header-nav",
+        "hero",
+        "campaign",
+        "product-list",
+        "features",
+        "testimonials",
+        "guarantee",
+        "faq",
+        "news",
+        "newsletter",
+        "sns-feed",
+        "footer"
+      ]
+    },
+    {
+      "id": "school",
+      "name": "スクール・教室",
+      "en": "School / Class",
+      "desc": "習い事・スクールの体験申込・入会獲得サイト",
+      "preset": [
+        "header-nav",
+        "hero",
+        "problem",
+        "features",
+        "curriculum",
+        "pricing",
+        "team",
+        "interview",
+        "testimonials",
+        "campaign",
+        "flow",
+        "faq",
+        "access",
+        "cta",
+        "contact",
+        "footer"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "header-nav",
+      "name": "ヘッダー・グローバルナビ",
+      "en": "Header & Navigation",
+      "purpose": "サイト全体の回遊導線と主要CTAへの常時アクセスを提供する",
+      "slots": ["ロゴ", "グローバルメニュー", "電話番号", "CTAボタン", "ハンバーガーメニュー"],
+      "variants": [
+        { "id": "logo-left", "name": "ロゴ左・メニュー右型", "desc": "最も標準的な横並び構成。可読性と慣習性が高い" },
+        { "id": "center-logo", "name": "センターロゴ型", "desc": "ロゴを中央配置しメニューを左右に分割。ブランド訴求向き" },
+        { "id": "with-cta", "name": "CTA強調型", "desc": "電話番号と予約・問い合わせボタンを右端で強調。店舗・LP向き" },
+        { "id": "transparent-overlay", "name": "透過オーバーレイ型", "desc": "ヒーローに重ねる透過ヘッダー。世界観重視のサイト向き" }
+      ],
+      "fits": ["lp", "corporate", "clinic", "restaurant", "salon", "professional", "recruit", "portfolio", "saas", "ec", "school"],
+      "priority": "core"
+    },
+    {
+      "id": "hero",
+      "name": "ヒーロー（ファーストビュー）",
+      "en": "Hero",
+      "purpose": "3秒で価値提案を伝え、スクロールとコンバージョンの動機を作る",
+      "slots": ["キャッチコピー", "サブコピー", "メインビジュアル", "CTAボタン", "権威付けバッジ（実績・受賞・No.1表記）", "お知らせ帯"],
+      "variants": [
+        { "id": "full-bleed", "name": "全面画像型", "desc": "写真・動画を全幅に敷きコピーを重ねる。世界観・空気感を最優先" },
+        { "id": "split", "name": "左右分割型", "desc": "左テキスト・右ビジュアルの2分割。情報伝達とCVのバランス型" },
+        { "id": "centered", "name": "中央寄せ型", "desc": "コピーとCTAを中央に集約。SaaS・LPの定番" },
+        { "id": "slider", "name": "スライダー・動画背景型", "desc": "複数ビジュアルの切替や背景動画で動きを出す。店舗・ブランド向き" }
+      ],
+      "fits": ["lp", "corporate", "clinic", "restaurant", "salon", "professional", "recruit", "portfolio", "saas", "ec", "school"],
+      "priority": "core"
+    },
+    {
+      "id": "problem",
+      "name": "課題提起・お悩み共感",
+      "en": "Problem Statement",
+      "purpose": "訪問者の悩みを言語化して「自分ごと化」させ読み進める理由を作る",
+      "slots": ["見出し（こんなお悩みありませんか）", "お悩みリスト", "共感イラスト・写真", "導入文"],
+      "variants": [
+        { "id": "checklist", "name": "チェックリスト型", "desc": "チェックボックス風の箇条書きでお悩みを列挙する定番形" },
+        { "id": "cards", "name": "お悩みカード型", "desc": "イラスト付きカードを並列表示。柔らかい印象を作る" },
+        { "id": "narrative", "name": "ストーリー導入型", "desc": "文章で状況を描写して深く共感させる。高単価商材向き" }
+      ],
+      "fits": ["lp", "clinic", "salon", "professional", "saas", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "solution",
+      "name": "解決策の提示",
+      "en": "Solution",
+      "purpose": "提示した悩みへの答えとして商品・サービスを位置づける",
+      "slots": ["ブリッジコピー（そのお悩み、◯◯が解決します）", "サービス概要", "イメージ画像", "解決できる根拠の一言"],
+      "variants": [
+        { "id": "bridge", "name": "ブリッジバナー型", "desc": "帯状の転換コピーで課題パートから解決パートへ橋渡しする" },
+        { "id": "split", "name": "画像・テキスト並列型", "desc": "サービス画像と説明文を並べて具体像を見せる" },
+        { "id": "steps", "name": "3ステップ提示型", "desc": "解決までの道筋を3段階で図解し納得感を作る" }
+      ],
+      "fits": ["lp", "clinic", "salon", "professional", "saas", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "features",
+      "name": "特徴・選ばれる理由",
+      "en": "Features & Reasons",
+      "purpose": "他と違う強みを整理し「ここを選ぶ根拠」を与える",
+      "slots": ["見出し", "特徴カード（アイコン＋タイトル＋説明）×3〜6", "理由のナンバリング", "補足画像"],
+      "variants": [
+        { "id": "icon-grid", "name": "アイコングリッド型", "desc": "アイコン＋短文カードを3列程度で並べる最頻出パターン" },
+        { "id": "zigzag", "name": "ジグザグ型", "desc": "画像とテキストを左右交互に配置し1つずつ深く説明する" },
+        { "id": "numbered", "name": "理由ナンバリング型", "desc": "「選ばれる理由01〜」と番号を大きく見せ権威感を出す" },
+        { "id": "tabs", "name": "タブ切替型", "desc": "特徴をタブで切り替え。情報量が多いプロダクト向き" }
+      ],
+      "fits": ["lp", "corporate", "clinic", "restaurant", "salon", "professional", "saas", "ec", "school"],
+      "priority": "core"
+    },
+    {
+      "id": "benefits",
+      "name": "ベネフィット・導入効果",
+      "en": "Benefits",
+      "purpose": "機能ではなく「得られる未来・変化」を提示し欲求を高める",
+      "slots": ["導入前→導入後の変化", "効果の数値", "利用シーン画像", "見出し"],
+      "variants": [
+        { "id": "before-after-arrows", "name": "変化対比型", "desc": "Before→Afterを矢印でつなぎ変化を直感的に見せる" },
+        { "id": "scene-cards", "name": "利用シーン型", "desc": "具体的な利用場面を写真カードで見せ自分の生活に重ねさせる" },
+        { "id": "stats-highlight", "name": "数値強調型", "desc": "「工数50%削減」など成果数値を大きく打ち出す" }
+      ],
+      "fits": ["lp", "saas", "school", "ec"],
+      "priority": "common"
+    },
+    {
+      "id": "concept",
+      "name": "コンセプト・理念",
+      "en": "Concept & Philosophy",
+      "purpose": "ブランドの世界観・価値観を伝え共感と愛着を作る",
+      "slots": ["コンセプトコピー", "ステートメント本文", "ブランド写真", "ミッション・ビジョン・バリュー"],
+      "variants": [
+        { "id": "statement", "name": "ステートメント型", "desc": "大きな文字組みのコピーを主役にした静的で品のある構成" },
+        { "id": "photo-overlay", "name": "写真オーバーレイ型", "desc": "情緒的な写真にコピーを重ね世界観へ引き込む" },
+        { "id": "mvv-cards", "name": "MVVカード型", "desc": "ミッション・ビジョン・バリューを3カードで整理。企業サイト向き" }
+      ],
+      "fits": ["corporate", "restaurant", "salon", "recruit", "portfolio", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "message",
+      "name": "代表挨拶・メッセージ",
+      "en": "Leader's Message",
+      "purpose": "代表・院長の人柄と想いを見せ、人への信頼を作る",
+      "slots": ["顔写真", "挨拶文", "氏名・肩書き", "経歴・資格", "サイン"],
+      "variants": [
+        { "id": "photo-side", "name": "写真横並び型", "desc": "ポートレートと挨拶文を並べる定番構成" },
+        { "id": "letter", "name": "手紙風型", "desc": "縦組みや便箋風の装飾で温度感のあるメッセージにする" },
+        { "id": "interview", "name": "一問一答型", "desc": "Q&A形式で人柄を引き出す。堅くなりすぎない" }
+      ],
+      "fits": ["corporate", "clinic", "professional", "recruit", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "about",
+      "name": "会社・事務所概要",
+      "en": "Company Profile",
+      "purpose": "基本情報を開示し実在性・信頼性を担保する",
+      "slots": ["会社名・屋号", "所在地", "設立年月日", "代表者", "資本金", "事業内容", "連絡先", "許認可・登録番号"],
+      "variants": [
+        { "id": "table", "name": "定義リスト表型", "desc": "項目名と内容の2列テーブル。最も情報が探しやすい" },
+        { "id": "split-photo", "name": "社屋写真併記型", "desc": "外観・オフィス写真を添えて実在感を強める" },
+        { "id": "cards", "name": "項目カード型", "desc": "主要項目をカード化してビジュアルに見せる" }
+      ],
+      "fits": ["corporate", "professional", "recruit", "ec"],
+      "priority": "common"
+    },
+    {
+      "id": "history",
+      "name": "沿革",
+      "en": "History & Timeline",
+      "purpose": "創業からの歩みを示し継続性と信頼を伝える",
+      "slots": ["年表（年＋出来事）", "節目の写真", "創業ストーリー"],
+      "variants": [
+        { "id": "vertical-timeline", "name": "縦タイムライン型", "desc": "中央線に沿って年と出来事を並べる定番形" },
+        { "id": "horizontal", "name": "横スクロール年表型", "desc": "横方向に歴史をたどるインタラクティブな見せ方" },
+        { "id": "story", "name": "ストーリー読み物型", "desc": "写真と文章で物語として読ませる。周年サイト向き" }
+      ],
+      "fits": ["corporate", "recruit"],
+      "priority": "niche"
+    },
+    {
+      "id": "service-list",
+      "name": "事業・サービス一覧",
+      "en": "Services",
+      "purpose": "提供サービスの全体像を見せ、各詳細ページへ誘導する",
+      "slots": ["サービスカード（画像＋名称＋説明＋リンク）", "カテゴリ見出し", "詳細へのボタン"],
+      "variants": [
+        { "id": "card-grid", "name": "カードグリッド型", "desc": "2〜3列のカードで並列に見せる標準形" },
+        { "id": "zigzag", "name": "交互レイアウト型", "desc": "画像とテキストを交互配置し1事業ずつ丁寧に紹介する" },
+        { "id": "list-links", "name": "リンクリスト型", "desc": "テキスト主体の大きなリンク行。事業数が多い企業向き" },
+        { "id": "tabs", "name": "タブ分類型", "desc": "事業領域をタブで切り替えて整理する" }
+      ],
+      "fits": ["corporate", "professional", "portfolio", "saas"],
+      "priority": "common"
+    },
+    {
+      "id": "product-detail",
+      "name": "商品・機能詳細",
+      "en": "Product Details",
+      "purpose": "主力商品・機能を深掘りし具体的な理解と欲求を作る",
+      "slots": ["商品・機能名", "説明文", "商品画像・スクリーンショット", "スペック表", "特長リスト"],
+      "variants": [
+        { "id": "zigzag", "name": "交互紹介型", "desc": "機能ごとに画像とテキストを左右交互に展開する" },
+        { "id": "tabs", "name": "タブ切替型", "desc": "複数機能をタブで整理しスペースを節約する" },
+        { "id": "spec-table", "name": "スペック表型", "desc": "仕様・成分・サイズなどを表で厳密に見せる。EC向き" }
+      ],
+      "fits": ["lp", "saas", "ec"],
+      "priority": "common"
+    },
+    {
+      "id": "demo-video",
+      "name": "デモ・動画紹介",
+      "en": "Video & Demo",
+      "purpose": "動きで魅力を直感的に伝え、テキストで伝わらない体験を補う",
+      "slots": ["動画埋め込み", "再生ボタン", "キャプション", "サムネイル画像"],
+      "variants": [
+        { "id": "full-width", "name": "全幅埋め込み型", "desc": "セクション全体を動画にして没入させる" },
+        { "id": "modal", "name": "モーダル再生型", "desc": "サムネイル＋再生ボタンでクリック時にポップアップ再生" },
+        { "id": "side-by-side", "name": "動画・説明並列型", "desc": "動画の隣に要点テキストを置き理解を補助する" }
+      ],
+      "fits": ["lp", "saas", "school", "recruit"],
+      "priority": "niche"
+    },
+    {
+      "id": "pricing",
+      "name": "料金表・プラン",
+      "en": "Pricing",
+      "purpose": "価格の透明性で「いくらかかるか不安」を解消し比較検討を促す",
+      "slots": ["プラン名", "価格", "期間・単位", "含まれる内容リスト", "おすすめバッジ", "注記（税込・初回価格）"],
+      "variants": [
+        { "id": "plan-cards", "name": "プランカード型", "desc": "2〜4プランをカードで横並びにし中央を推奨強調する" },
+        { "id": "table", "name": "料金一覧表型", "desc": "メニューと価格を表形式で網羅。店舗・士業向き" },
+        { "id": "single-price", "name": "単一価格強調型", "desc": "1つの価格を大きく見せる。LP・単品商材向き" },
+        { "id": "toggle", "name": "月額・年額切替型", "desc": "課金周期をトグルで切り替える。SaaSの定番" }
+      ],
+      "fits": ["lp", "clinic", "salon", "professional", "saas", "school"],
+      "priority": "core"
+    },
+    {
+      "id": "menu",
+      "name": "メニュー一覧",
+      "en": "Menu",
+      "purpose": "施術・料理などの提供メニューを価格つきで魅力的に一覧化する",
+      "slots": ["メニュー名", "価格", "説明文", "写真", "カテゴリ", "おすすめマーク"],
+      "variants": [
+        { "id": "photo-cards", "name": "写真カード型", "desc": "料理・施術写真を主役にしたカードグリッド" },
+        { "id": "price-list", "name": "品書きリスト型", "desc": "メニュー名と価格を点線でつなぐ品書きスタイル" },
+        { "id": "category-tabs", "name": "カテゴリタブ型", "desc": "コース・単品などカテゴリをタブで切り替える" }
+      ],
+      "fits": ["restaurant", "salon", "clinic"],
+      "priority": "common"
+    },
+    {
+      "id": "campaign",
+      "name": "キャンペーン・特典",
+      "en": "Campaign & Offer",
+      "purpose": "初回特典・期間限定オファーで「今行動する理由」を作る",
+      "slots": ["特典内容", "通常価格→特別価格", "期限・条件", "クーポンコード", "CTAボタン"],
+      "variants": [
+        { "id": "banner", "name": "バナー帯型", "desc": "目立つ色の帯で特典を訴求しCTAへつなぐ" },
+        { "id": "coupon", "name": "クーポン券風型", "desc": "切り取り線などチケット風の意匠でお得感を演出する" },
+        { "id": "countdown", "name": "カウントダウン型", "desc": "残り時間・残り枠を表示し緊急性を高める" }
+      ],
+      "fits": ["lp", "clinic", "salon", "restaurant", "ec", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "comparison",
+      "name": "比較表",
+      "en": "Comparison Table",
+      "purpose": "他社・他手段との違いを一目で示し優位性を証明する",
+      "slots": ["比較軸（項目）", "自社列（強調）", "他社・他手段の列", "◯✕△マーク"],
+      "variants": [
+        { "id": "vs-table", "name": "自社強調比較表型", "desc": "自社列を色とサイズで強調した定番の比較マトリクス" },
+        { "id": "plan-matrix", "name": "プラン機能マトリクス型", "desc": "自社プラン間の機能差を整理する。SaaS向き" },
+        { "id": "before-after", "name": "乗り換え対比型", "desc": "従来手段と導入後を左右で対比させる" }
+      ],
+      "fits": ["lp", "saas", "ec"],
+      "priority": "niche"
+    },
+    {
+      "id": "guarantee",
+      "name": "保証・安心サポート",
+      "en": "Guarantee & Assurance",
+      "purpose": "返金・返品・サポート体制でCV直前の最後の不安を除去する",
+      "slots": ["保証内容（返金・返品・サポート期間）", "保証バッジ画像", "適用条件の注記", "サポート窓口"],
+      "variants": [
+        { "id": "badge-row", "name": "バッジ横並び型", "desc": "保証・認証のバッジを並べて安心感を瞬時に伝える" },
+        { "id": "detail-cards", "name": "保証カード型", "desc": "各保証の内容をカードで丁寧に説明する" },
+        { "id": "banner", "name": "帯型", "desc": "CTA直前に1行の保証帯を置き背中を押す" }
+      ],
+      "fits": ["lp", "ec", "saas", "school"],
+      "priority": "niche"
+    },
+    {
+      "id": "product-list",
+      "name": "商品一覧",
+      "en": "Product Grid",
+      "purpose": "商品を回遊しやすく並べ、商品詳細・購入へ誘導する",
+      "slots": ["商品カード（画像＋名称＋価格）", "カテゴリフィルタ", "ランキングバッジ", "もっと見るリンク"],
+      "variants": [
+        { "id": "grid", "name": "グリッド型", "desc": "3〜4列の均等グリッド。一覧性最優先の標準形" },
+        { "id": "ranking", "name": "ランキング型", "desc": "1位〜の順位バッジ付きで人気商品を訴求する" },
+        { "id": "carousel", "name": "カルーセル型", "desc": "横スクロールで新着・おすすめを流し見させる" },
+        { "id": "category-tiles", "name": "カテゴリタイル型", "desc": "カテゴリ入口を大きなタイルで見せ回遊させる" }
+      ],
+      "fits": ["ec"],
+      "priority": "niche"
+    },
+    {
+      "id": "case-study",
+      "name": "導入事例・実績",
+      "en": "Case Studies",
+      "purpose": "第三者の成功例で効果を証明し「自社でもできそう」と思わせる",
+      "slots": ["顧客名・業種", "課題→施策→成果のストーリー", "数値成果", "担当者コメント", "顧客ロゴ・写真"],
+      "variants": [
+        { "id": "card-grid", "name": "事例カード型", "desc": "複数事例をカードで並べ詳細ページへ誘導する" },
+        { "id": "featured", "name": "1件深掘り型", "desc": "代表事例をストーリーでじっくり読ませる" },
+        { "id": "logo-numbers", "name": "ロゴ＋数値型", "desc": "顧客ロゴと成果数値だけで簡潔に量を見せる" }
+      ],
+      "fits": ["corporate", "saas", "professional", "portfolio"],
+      "priority": "common"
+    },
+    {
+      "id": "before-after",
+      "name": "症例・ビフォーアフター",
+      "en": "Before & After",
+      "purpose": "施術・改善の変化を視覚的に証明し効果への確信を作る",
+      "slots": ["Before写真", "After写真", "症状・施術内容", "期間・回数", "注意書き（効果には個人差があります）"],
+      "variants": [
+        { "id": "side-by-side", "name": "左右比較型", "desc": "Before/Afterを左右に並べる最も分かりやすい形" },
+        { "id": "slider", "name": "スライダー比較型", "desc": "つまみを動かして同一画角の変化を見せる" },
+        { "id": "case-cards", "name": "症例カード型", "desc": "症例ごとに写真＋経過情報をカード化して並べる" }
+      ],
+      "fits": ["clinic", "salon"],
+      "priority": "niche"
+    },
+    {
+      "id": "testimonials",
+      "name": "お客様の声",
+      "en": "Testimonials",
+      "purpose": "実際の利用者の声で信頼と共感を獲得し不安を打ち消す",
+      "slots": ["顔写真・イニシャル", "属性（年代・職業・地域）", "星評価", "感想本文", "直筆アンケート画像"],
+      "variants": [
+        { "id": "card-grid", "name": "カード並列型", "desc": "3件前後の声をカードで並べる標準形" },
+        { "id": "speech-bubbles", "name": "吹き出し型", "desc": "吹き出し＋アイコンで会話的に見せ親近感を出す" },
+        { "id": "carousel", "name": "スライダー型", "desc": "多数の声を横スクロールで見せ量を演出する" },
+        { "id": "handwritten", "name": "直筆アンケート型", "desc": "手書きアンケートの写真を掲載しリアリティを最大化する" }
+      ],
+      "fits": ["lp", "corporate", "clinic", "restaurant", "salon", "professional", "portfolio", "saas", "ec", "school"],
+      "priority": "core"
+    },
+    {
+      "id": "logos-media",
+      "name": "取引先・メディア掲載・受賞",
+      "en": "Logos, Media & Awards",
+      "purpose": "取引実績・掲載歴・受賞をロゴとバッジで見せ権威性を瞬時に伝える",
+      "slots": ["企業ロゴ列", "メディア名・番組名", "受賞・認証バッジ", "導入社数・掲載数"],
+      "variants": [
+        { "id": "logo-strip", "name": "ロゴ帯型", "desc": "グレースケールのロゴを1〜2行で並べる定番形" },
+        { "id": "marquee", "name": "自動スクロール型", "desc": "ロゴが流れ続けるマーキーで数の多さを演出する" },
+        { "id": "badges", "name": "受賞バッジ型", "desc": "受賞・認証・No.1調査などのエンブレムを並べる" }
+      ],
+      "fits": ["lp", "corporate", "professional", "recruit", "saas", "ec"],
+      "priority": "common"
+    },
+    {
+      "id": "stats",
+      "name": "数字で見る",
+      "en": "Stats & Numbers",
+      "purpose": "実績・規模・特徴を数値化し瞬時に説得力を持たせる",
+      "slots": ["数値（大きく表示）", "単位", "ラベル", "アイコン・イラスト", "集計時点の注記"],
+      "variants": [
+        { "id": "counter-grid", "name": "数値グリッド型", "desc": "4〜8個の数値をグリッドで並べる採用サイトの定番" },
+        { "id": "infographic", "name": "インフォグラフィック型", "desc": "円グラフやイラストで数値を図解し楽しく見せる" },
+        { "id": "highlight-band", "name": "帯強調型", "desc": "重要数値3つ程度を濃色の帯で大きく打ち出す" }
+      ],
+      "fits": ["lp", "corporate", "recruit", "saas", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "gallery",
+      "name": "ギャラリー",
+      "en": "Photo Gallery",
+      "purpose": "店内・スタイル・料理・設備を写真で追体験させ来店イメージを作る",
+      "slots": ["写真グリッド", "キャプション", "カテゴリフィルタ", "ライトボックス拡大"],
+      "variants": [
+        { "id": "grid", "name": "均等グリッド型", "desc": "同サイズの写真を整然と並べる。清潔感・信頼感重視" },
+        { "id": "masonry", "name": "メーソンリー型", "desc": "高さの異なる写真をタイル状に敷き詰め雑誌感を出す" },
+        { "id": "carousel", "name": "カルーセル型", "desc": "横スクロールで枚数多く見せる。省スペース" }
+      ],
+      "fits": ["clinic", "restaurant", "salon", "portfolio", "ec", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "works",
+      "name": "制作実績・作品集",
+      "en": "Works & Portfolio",
+      "purpose": "制作物・実績を見せスキルとテイストを証明する",
+      "slots": ["作品サムネイル", "タイトル", "担当領域・使用技術", "クライアント名", "詳細リンク"],
+      "variants": [
+        { "id": "grid", "name": "サムネイルグリッド型", "desc": "作品を均等グリッドで並べ量とテイストを一覧させる" },
+        { "id": "featured-list", "name": "大型交互型", "desc": "代表作を大きく交互配置し1点ずつ語る" },
+        { "id": "filter-grid", "name": "カテゴリフィルタ型", "desc": "ジャンル絞り込み付きグリッド。作品数が多い場合に" }
+      ],
+      "fits": ["portfolio", "corporate"],
+      "priority": "common"
+    },
+    {
+      "id": "team",
+      "name": "スタッフ・チーム紹介",
+      "en": "Team & Staff",
+      "purpose": "「誰が対応してくれるのか」を見せ人への安心感を作る",
+      "slots": ["顔写真", "氏名", "役職・資格", "得意分野・一言コメント", "SNSリンク"],
+      "variants": [
+        { "id": "card-grid", "name": "プロフィールカード型", "desc": "顔写真＋名前＋肩書きのカードを並べる標準形" },
+        { "id": "list-detail", "name": "横並び詳細型", "desc": "1人ずつ写真と経歴・想いをしっかり紹介する" },
+        { "id": "casual", "name": "オフショット型", "desc": "作業風景や笑顔のスナップで職場の空気感を伝える" }
+      ],
+      "fits": ["corporate", "clinic", "restaurant", "salon", "professional", "recruit", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "profile",
+      "name": "プロフィール",
+      "en": "Personal Profile",
+      "purpose": "個人の経歴・スキル・実績を伝え指名・依頼につなげる",
+      "slots": ["ポートレート", "名前・肩書き", "経歴", "スキル・使用ツール", "受賞・登壇歴", "SNSリンク"],
+      "variants": [
+        { "id": "side-photo", "name": "写真・経歴並列型", "desc": "ポートレートと自己紹介文を並べるシンプルな形" },
+        { "id": "timeline", "name": "経歴タイムライン型", "desc": "キャリアを年表で見せ歩みを物語る" },
+        { "id": "skills-visual", "name": "スキル可視化型", "desc": "スキルをバー・タグ・アイコンで視覚的に整理する" }
+      ],
+      "fits": ["portfolio", "professional"],
+      "priority": "niche"
+    },
+    {
+      "id": "interview",
+      "name": "インタビュー",
+      "en": "Interviews",
+      "purpose": "社員・生徒のリアルな声で入社後・入会後の具体的イメージを作る",
+      "slots": ["人物写真", "属性（部署・入社年次・コース）", "Q&A本文", "1日の流れ", "他インタビューへのリンク"],
+      "variants": [
+        { "id": "card-links", "name": "一覧カード型", "desc": "人物写真＋キャッチコピーのカードで一覧し詳細へ誘導する" },
+        { "id": "featured-quote", "name": "引用大型", "desc": "印象的な一言を大きく引用し1人を深掘りする" },
+        { "id": "day-schedule", "name": "1日の流れ型", "desc": "タイムライン形式で1日の仕事・学びの流れを見せる" }
+      ],
+      "fits": ["recruit", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "culture",
+      "name": "働く環境・福利厚生",
+      "en": "Culture & Benefits",
+      "purpose": "制度・環境・社風を見せ「ここで働く自分」を想像させる",
+      "slots": ["制度リスト（アイコン＋名称＋説明）", "オフィス写真", "社内イベント写真", "環境データ（休暇取得率など）"],
+      "variants": [
+        { "id": "icon-grid", "name": "制度アイコングリッド型", "desc": "福利厚生をアイコン付きカードで網羅的に見せる" },
+        { "id": "photo-collage", "name": "写真コラージュ型", "desc": "オフィスやイベントの写真を敷き詰め空気感を伝える" },
+        { "id": "tabs", "name": "カテゴリタブ型", "desc": "制度・環境・イベントなどをタブで整理する" }
+      ],
+      "fits": ["recruit", "corporate"],
+      "priority": "common"
+    },
+    {
+      "id": "recruit-message",
+      "name": "採用メッセージ",
+      "en": "Recruiting Message",
+      "purpose": "会社の想いと求める人物像を伝え応募の熱量を上げる",
+      "slots": ["採用キャッチコピー", "メッセージ本文", "代表・人事の写真", "求める人物像"],
+      "variants": [
+        { "id": "full-photo", "name": "全面写真型", "desc": "働く人の写真全面にキャッチコピーを重ね感情に訴える" },
+        { "id": "letter", "name": "手紙型", "desc": "候補者への手紙として想いを綴る温度の高い構成" },
+        { "id": "values", "name": "人物像カード型", "desc": "求める価値観・行動をカードで具体的に示す" }
+      ],
+      "fits": ["recruit", "corporate"],
+      "priority": "common"
+    },
+    {
+      "id": "job-openings",
+      "name": "募集要項",
+      "en": "Job Openings",
+      "purpose": "職種・条件を明確に提示しミスマッチなく応募へつなげる",
+      "slots": ["職種名", "雇用形態", "仕事内容", "給与・勤務時間・休日", "応募資格", "エントリーボタン"],
+      "variants": [
+        { "id": "accordion", "name": "職種アコーディオン型", "desc": "職種ごとに開閉して詳細を見せる。職種が多い場合に" },
+        { "id": "table", "name": "要項テーブル型", "desc": "労働条件を表形式で正確に記載する定番形" },
+        { "id": "cards", "name": "職種カード型", "desc": "職種を写真付きカードで見せ詳細ページへ誘導する" }
+      ],
+      "fits": ["recruit", "corporate"],
+      "priority": "common"
+    },
+    {
+      "id": "curriculum",
+      "name": "コース・カリキュラム",
+      "en": "Curriculum",
+      "purpose": "学べる内容と成長ステップを具体的に示し入会後を想像させる",
+      "slots": ["コース名", "対象レベル", "学習内容", "期間・回数", "時間割・スケジュール", "料金へのリンク"],
+      "variants": [
+        { "id": "course-cards", "name": "コースカード型", "desc": "コースごとの対象・内容・料金をカードで比較させる" },
+        { "id": "step-flow", "name": "ステップ進行型", "desc": "入門→応用→実践と成長の道筋を段階図で見せる" },
+        { "id": "timetable", "name": "時間割型", "desc": "曜日×時間のスケジュール表でレッスン枠を見せる" }
+      ],
+      "fits": ["school"],
+      "priority": "niche"
+    },
+    {
+      "id": "flow",
+      "name": "ご利用の流れ",
+      "en": "Process Flow",
+      "purpose": "申込〜利用開始までの手順を可視化し「面倒・不安」を消す",
+      "slots": ["ステップ番号", "ステップ名", "説明文", "アイコン・写真", "所要時間"],
+      "variants": [
+        { "id": "horizontal-steps", "name": "横並びステップ型", "desc": "STEP1〜を矢印でつなぎ横に並べる標準形" },
+        { "id": "vertical-timeline", "name": "縦タイムライン型", "desc": "縦に順を追って丁寧に説明する。手順が多い場合に" },
+        { "id": "numbered-cards", "name": "番号カード型", "desc": "大きな番号＋写真のカードで各ステップを具体的に見せる" }
+      ],
+      "fits": ["lp", "clinic", "restaurant", "salon", "professional", "recruit", "saas", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "faq",
+      "name": "よくある質問",
+      "en": "FAQ",
+      "purpose": "疑問と不安を先回りで解消し離脱と問い合わせ負荷を減らす",
+      "slots": ["質問文", "回答文", "カテゴリ", "Q・Aアイコン"],
+      "variants": [
+        { "id": "accordion", "name": "アコーディオン型", "desc": "クリックで回答を開閉する省スペースの定番形" },
+        { "id": "two-column", "name": "2カラム一覧型", "desc": "Q&Aを常時展開で2列に並べる。読み飛ばしやすい" },
+        { "id": "category-tabs", "name": "カテゴリタブ型", "desc": "料金・予約などカテゴリ別にタブで整理する" }
+      ],
+      "fits": ["lp", "corporate", "clinic", "restaurant", "salon", "professional", "recruit", "portfolio", "saas", "ec", "school"],
+      "priority": "core"
+    },
+    {
+      "id": "news",
+      "name": "お知らせ・ニュース",
+      "en": "News",
+      "purpose": "最新情報の発信で「今も活動している」安心感を伝える",
+      "slots": ["日付", "カテゴリラベル", "タイトル", "記事リンク", "一覧ページへのリンク"],
+      "variants": [
+        { "id": "list", "name": "リスト型", "desc": "日付＋タイトルの行を縦に並べる最小構成" },
+        { "id": "cards", "name": "サムネイルカード型", "desc": "画像付きカードで視覚的に見せる。更新頻度が高い場合に" },
+        { "id": "ticker", "name": "ティッカー型", "desc": "最新1件をヘッダー下の帯で流す省スペース形" }
+      ],
+      "fits": ["corporate", "clinic", "restaurant", "salon", "ec", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "blog",
+      "name": "ブログ・コラム",
+      "en": "Blog & Articles",
+      "purpose": "専門知識の発信でSEO流入と専門性への信頼を積み上げる",
+      "slots": ["記事カード（サムネイル＋タイトル＋日付＋カテゴリ）", "人気記事", "タグ・カテゴリ一覧"],
+      "variants": [
+        { "id": "card-grid", "name": "カードグリッド型", "desc": "最新記事を3件前後のカードで見せる標準形" },
+        { "id": "featured-list", "name": "注目記事＋リスト型", "desc": "1件を大きく、残りをリストで添える強弱のある構成" },
+        { "id": "horizontal-scroll", "name": "横スクロール型", "desc": "カルーセルで多くの記事を省スペースに見せる" }
+      ],
+      "fits": ["corporate", "clinic", "professional", "portfolio", "saas", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "sns-feed",
+      "name": "SNSフィード",
+      "en": "Social Feed",
+      "purpose": "日々の投稿を見せて鮮度と親近感を伝えフォローにつなげる",
+      "slots": ["Instagram・Xの埋め込みグリッド", "アカウント名", "フォローボタン"],
+      "variants": [
+        { "id": "insta-grid", "name": "Instagramグリッド型", "desc": "最新投稿を正方形グリッドで見せる店舗の定番" },
+        { "id": "timeline-embed", "name": "タイムライン埋め込み型", "desc": "Xなどのタイムラインをそのまま埋め込む" },
+        { "id": "banner-links", "name": "SNSバナー型", "desc": "各SNSへの誘導バナーを並べる軽量な形" }
+      ],
+      "fits": ["restaurant", "salon", "portfolio", "ec", "school"],
+      "priority": "niche"
+    },
+    {
+      "id": "access",
+      "name": "アクセス・店舗情報",
+      "en": "Access & Location",
+      "purpose": "場所・行き方・営業時間を明確に伝え来店の障壁を下げる",
+      "slots": ["Googleマップ", "住所", "最寄り駅・道順", "営業時間・定休日", "駐車場情報", "外観写真", "電話番号"],
+      "variants": [
+        { "id": "map-split", "name": "地図・情報並列型", "desc": "地図と店舗情報テーブルを左右に並べる標準形" },
+        { "id": "full-map", "name": "全幅地図型", "desc": "地図を全幅で大きく見せ情報を重ねる" },
+        { "id": "route-photos", "name": "道順写真ガイド型", "desc": "駅からの道順を写真つきで案内する。初来店の不安を解消" }
+      ],
+      "fits": ["corporate", "clinic", "restaurant", "salon", "professional", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "reservation",
+      "name": "予約・申込",
+      "en": "Reservation & Booking",
+      "purpose": "予約手段を1か所に集約し「今すぐの行動」につなげる",
+      "slots": ["電話番号（タップ発信）", "Web予約ボタン", "LINE予約", "外部予約サイトリンク", "受付時間の注記"],
+      "variants": [
+        { "id": "triple-buttons", "name": "電話・Web・LINE並列型", "desc": "3つの予約手段を大きなボタンで並べる店舗の定番" },
+        { "id": "line-emphasis", "name": "LINE誘導特化型", "desc": "LINE友だち追加を主役にしQRコードを添える" },
+        { "id": "embedded-calendar", "name": "予約カレンダー埋込型", "desc": "空き状況カレンダーを直接埋め込みその場で完結させる" }
+      ],
+      "fits": ["clinic", "restaurant", "salon", "school"],
+      "priority": "common"
+    },
+    {
+      "id": "cta",
+      "name": "CTA・コンバージョンエリア",
+      "en": "Call To Action",
+      "purpose": "ページの要所で行動を促す締めの誘導セクション",
+      "slots": ["訴求コピー", "CTAボタン（最大2種）", "電話番号", "特典・保証の再掲", "締切・限定の表示"],
+      "variants": [
+        { "id": "banner", "name": "シンプルバナー型", "desc": "コピー＋ボタン1つの帯。ページ中間の再訴求に使う" },
+        { "id": "closing", "name": "クロージング型", "desc": "限定性・保証・特典を総動員する最終セクション向けの厚い構成" },
+        { "id": "split-actions", "name": "2択導線型", "desc": "電話とフォームなど2つの行動を左右で並べる" },
+        { "id": "floating", "name": "追従フローティング型", "desc": "画面下部に固定表示し続けるバー・ボタン" }
+      ],
+      "fits": ["lp", "corporate", "clinic", "restaurant", "salon", "professional", "recruit", "portfolio", "saas", "ec", "school"],
+      "priority": "core"
+    },
+    {
+      "id": "contact",
+      "name": "お問い合わせフォーム",
+      "en": "Contact Form",
+      "purpose": "問い合わせのハードルを下げ確実に送信まで完了させる",
+      "slots": ["入力フィールド（名前・連絡先・内容）", "プライバシーポリシー同意", "送信ボタン", "電話・受付時間の代替導線", "入力ステップ表示"],
+      "variants": [
+        { "id": "simple", "name": "シンプル1カラム型", "desc": "項目最小限の縦1列フォーム。完了率重視の標準形" },
+        { "id": "split-info", "name": "フォーム・情報並列型", "desc": "フォームの隣に電話番号や営業時間を置き選ばせる" },
+        { "id": "step-form", "name": "ステップ分割型", "desc": "入力を複数画面に分け心理的負担を下げる。LP向き" }
+      ],
+      "fits": ["lp", "corporate", "clinic", "restaurant", "salon", "professional", "recruit", "portfolio", "saas", "ec", "school"],
+      "priority": "core"
+    },
+    {
+      "id": "newsletter",
+      "name": "メルマガ・LINE登録",
+      "en": "Newsletter & LINE",
+      "purpose": "今すぐ買わない層と接点を作り再訪・再購入を促す",
+      "slots": ["登録特典の提示", "メールアドレス入力", "LINE友だち追加ボタン", "QRコード"],
+      "variants": [
+        { "id": "inline-band", "name": "帯型", "desc": "1行の入力欄＋ボタンの帯をページ下部に置く" },
+        { "id": "benefit-card", "name": "特典カード型", "desc": "クーポンなど登録メリットを前面に出して訴求する" },
+        { "id": "qr-split", "name": "QR並列型", "desc": "LINEのQRコードとボタンを並べPC・スマホ両対応する" }
+      ],
+      "fits": ["lp", "saas", "ec", "school"],
+      "priority": "niche"
+    },
+    {
+      "id": "integration",
+      "name": "連携・対応環境",
+      "en": "Integrations",
+      "purpose": "既存ツール・環境との親和性を示し導入の障壁を下げる",
+      "slots": ["連携サービスのロゴ", "連携カテゴリ", "対応OS・ブラウザ", "API・拡張性の言及"],
+      "variants": [
+        { "id": "logo-grid", "name": "ロゴタイル型", "desc": "連携先ロゴをタイル状に並べエコシステムの広さを見せる" },
+        { "id": "category-tabs", "name": "カテゴリタブ型", "desc": "会計・チャットなど用途別タブで整理する" },
+        { "id": "marquee", "name": "スクロール型", "desc": "ロゴを流し続けて連携数の多さを演出する" }
+      ],
+      "fits": ["saas"],
+      "priority": "niche"
+    },
+    {
+      "id": "footer",
+      "name": "フッター",
+      "en": "Footer",
+      "purpose": "全ページ共通の情報整理と迷ったユーザーの最後の受け皿",
+      "slots": ["ロゴ", "サイトマップリンク", "会社情報・住所・電話", "SNSアイコン", "法的リンク（プライバシーポリシー・特商法）", "コピーライト"],
+      "variants": [
+        { "id": "multi-column", "name": "マルチカラム型", "desc": "リンクを3〜4列で整理する情報量の多いサイト向け標準形" },
+        { "id": "simple-center", "name": "シンプル中央型", "desc": "ロゴ・SNS・コピーライトのみの最小構成。LP・ポートフォリオ向き" },
+        { "id": "cta-footer", "name": "CTA付き大型フッター型", "desc": "上段に最終CTA、下段にリンク群を持つ厚いフッター" }
+      ],
+      "fits": ["lp", "corporate", "clinic", "restaurant", "salon", "professional", "recruit", "portfolio", "saas", "ec", "school"],
+      "priority": "core"
+    }
+  ]
+}

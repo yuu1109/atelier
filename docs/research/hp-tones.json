@@ -1,0 +1,351 @@
+{
+  "source": "/Users/yuu_design2022/Desktop/Project/HP/design-system/tones/",
+  "generatedAt": "2026-07-05",
+  "note": "各トーンの colors は元ファイルの :root スニペットからHEXをそのまま転記。fonts はGoogle Fonts実在ファミリー名。",
+  "tones": [
+    {
+      "id": "wa-modern",
+      "file": "01-wa-modern.md",
+      "name_ja": "和モダン",
+      "personality": "声を張らずに信頼させる、落ち着いた和の主人",
+      "keywords": ["生成りと墨", "静けさと間", "手仕事の質感"],
+      "industries_good": [
+        "整骨院・接骨院・鍼灸院・治療院",
+        "和食店・割烹・蕎麦・甘味処",
+        "老舗・工芸・旅館・茶舗など時間の蓄積を資産にする業態"
+      ],
+      "industries_bad": [
+        "スピード感・活発さを売る業態（ジム・子ども向けスクール・量販店）",
+        "高彩度・ポップさで親近感を作りたいサービス",
+        "理由なきダーク基調を求めるケース"
+      ],
+      "colors": {
+        "bg": "#F6F1E7",
+        "bgAlt": "#EFE8DA",
+        "surface": "#FBF7EF",
+        "ink": "#2A2724",
+        "inkMuted": "#6B6055",
+        "primary": "#2E4A3B",
+        "onPrimary": "#F6F1E7",
+        "accent": "#B04A2F",
+        "border": "#DBD2C2"
+      },
+      "fonts": {
+        "heading": "Shippori Mincho",
+        "body": "Noto Sans JP",
+        "accent": "Cormorant"
+      },
+      "spacingDefault": "--space-12",
+      "radiusAttitude": "角丸0（直角基調）。影は使わず細い罫線と地色差で階層を作る",
+      "titleRecipes": ["T-25", "T-08", "T-22"],
+      "buttonRecipes": ["B-03", "B-19"],
+      "photoTone": "自然光・低彩度（-15〜-25%）やや暖色の実写。filter: saturate(0.8) contrast(1.05) brightness(0.98) sepia(0.05)、微細グレイン4〜8%可",
+      "forbidden": [
+        "効果・効能の断定表現（柔道整復師法の広告制限。「腰痛が治る」等）",
+        "淡い差し色（primary-soft等）を本文文字色に使う",
+        "紫〜青グラデ背景・汎用ストック写真・理由なきダーク基調"
+      ]
+    },
+    {
+      "id": "clean-trust",
+      "file": "02-clean-trust.md",
+      "name_ja": "クリーン&トラスト",
+      "personality": "相談していいのか迷っている人の肩の力を抜く、誠実で敷居の低い専門家",
+      "keywords": ["誠実", "明快", "敷居を下げる"],
+      "industries_good": [
+        "税理士・行政書士・司法書士・社労士などの士業事務所",
+        "小規模クリニック・歯科・調剤薬局",
+        "相続・許認可・確定申告など相談型の専門サービス"
+      ],
+      "industries_bad": [
+        "感情や勢いで衝動的に選ばれる商材（飲食・アパレル・エンタメ）",
+        "若年層向けのポップさ・遊び心を前面に出したいブランド",
+        "ビジュアルの派手さ・世界観の濃さで勝負する業種"
+      ],
+      "colors": {
+        "bg": "#FBFAF7",
+        "bgAlt": "#F1EFEA",
+        "surface": "#FFFFFF",
+        "ink": "#20272E",
+        "inkMuted": "#5A636C",
+        "primary": "#1F3A5F",
+        "onPrimary": "#FFFFFF",
+        "accent": "#E7DFCF",
+        "border": "#E3DFD7"
+      },
+      "fonts": {
+        "heading": "BIZ UDPGothic",
+        "body": "BIZ UDPGothic",
+        "accent": "EB Garamond"
+      },
+      "spacingDefault": "--space-12",
+      "radiusAttitude": "サイト全体を--radius-sm（4px）で統一。影は控えめ（--shadow-soft 1画面2箇所まで）、罫線と地色差で階層",
+      "titleRecipes": ["T-12", "T-07"],
+      "buttonRecipes": ["B-03", "B-19"],
+      "photoTone": "明るい均一な室内光・低彩度ほんのり暖色の実写（代表・スタッフ・院内）。filter: saturate(0.94) contrast(1.02) brightness(1.02)",
+      "forbidden": [
+        "誇大・誤認表示（税理士会広告規則・医療広告ガイドライン。「必ず還付」「絶対安全」等）",
+        "AIブルー（高彩度indigo）・紫〜青のグラデーション背景",
+        "料金を隠して「お問い合わせください」を多用する"
+      ]
+    },
+    {
+      "id": "warm-craft",
+      "file": "03-warm-craft.md",
+      "name_ja": "ウォーム&クラフト",
+      "personality": "焼きたての湯気の向こうで、作り手が手を止めずに「いらっしゃい」と笑う、素朴で温かい個人店",
+      "keywords": ["手仕事の温もり", "焼き色とシズル", "素朴な密度"],
+      "industries_good": [
+        "ベーカリー・自家焙煎カフェ・焼き菓子やジャム等クラフト食品の工房",
+        "陶芸・木工・革・染織などの手仕事アトリエ",
+        "産直・マルシェ系、素材やレシピにこだわる個人飲食店"
+      ],
+      "industries_bad": [
+        "士業・クリニック・金融など無彩色寄りの信頼を売る業種",
+        "ラグジュアリー美容・高単価サロン",
+        "ジムのハード表現・ビビッド原色の子ども向け教室"
+      ],
+      "colors": {
+        "bg": "#F5EFE6",
+        "bgAlt": "#EDE4D6",
+        "surface": "#FBF7F0",
+        "ink": "#3E2C23",
+        "inkMuted": "#6E5548",
+        "primary": "#A85035",
+        "onPrimary": "#FBF7F0",
+        "accent": "#C8912F",
+        "border": "#DBCDB8"
+      },
+      "fonts": {
+        "heading": "Klee One",
+        "body": "Zen Kaku Gothic Antique",
+        "accent": "Fraunces"
+      },
+      "spacingDefault": "--space-8",
+      "radiusAttitude": "角丸大きめ（カード--radius-md 8px、CTAはピル--radius-full）。影は--shadow-soft標準・ホバーのみlift",
+      "titleRecipes": ["T-05", "T-08"],
+      "buttonRecipes": ["B-09", "B-05"],
+      "photoTone": "ナチュラル光・暖色強め・彩度やや高めのシズル（気泡・湯気・手元）。filter: saturate(1.1) contrast(0.94) brightness(1.04) sepia(0.08)、グレイン6〜12%推奨",
+      "forbidden": [
+        "テラコッタprimary・マスタードaccentを本文文字色に使う（WCAG未達）",
+        "景表法・優良誤認（「自家製」「無添加」等が実態と不一致な表示）",
+        "彩度全開のビビッドカラー・紫グラデ・ネオン"
+      ]
+    },
+    {
+      "id": "editorial-minimal",
+      "file": "04-editorial-minimal.md",
+      "name_ja": "エディトリアル・ミニマル",
+      "personality": "余白と特大タイポグラフィだけで「センスがある」と言い切る、無駄口を叩かない編集者",
+      "keywords": ["引き算の美学", "特大タイポグラフィ", "非対称グリッド"],
+      "industries_good": [
+        "デザイン事務所・クリエイティブスタジオ（Works主体のポートフォリオ）",
+        "ブランドコンサル・アートディレクション・写真スタジオ",
+        "建築・インテリア設計事務所、少数精鋭のプロダクト系ブランド"
+      ],
+      "industries_bad": [
+        "情報量が多く詰め込みが正義の業種（求人媒体・EC一覧・比較サイト）",
+        "賑やかさ・親しみやすさで安心を売る業種（子ども向け教室・地域密着の商店）",
+        "実績写真をほぼ用意できない事業者"
+      ],
+      "colors": {
+        "bg": "#FFFFFF",
+        "bgAlt": "#F4F2EE",
+        "surface": "#FFFFFF",
+        "ink": "#111111",
+        "inkMuted": "#6E6E6E",
+        "primary": "#141414",
+        "onPrimary": "#FFFFFF",
+        "accent": "#C8352B",
+        "border": "#E4E1DB"
+      },
+      "fonts": {
+        "heading": "Zen Old Mincho",
+        "body": "Murecho",
+        "accent": "Playfair Display"
+      },
+      "spacingDefault": "--space-16",
+      "radiusAttitude": "角丸ゼロ（直角・硬質）。影は使わない（box-shadow: none）、区切りは1px罫線のみ",
+      "titleRecipes": ["T-35", "T-13", "T-26"],
+      "buttonRecipes": ["B-30", "B-25"],
+      "photoTone": "自然光・大胆な脱彩度（-20〜-30%）寒色寄り・高コントラスト。filter: saturate(0.7) contrast(1.15) brightness(0.97) grayscale(0.1)、グレイン原則不使用",
+      "forbidden": [
+        "ミニマルを履き違えて問い合わせ導線を余白に埋もれさせる",
+        "根拠のない最上級表現（景表法・優良誤認。「業界No.1」等）",
+        "角丸・影・カードを足す（直角・1px罫線・影ゼロを崩さない）"
+      ]
+    },
+    {
+      "id": "pop-friendly",
+      "file": "05-pop-friendly.md",
+      "name_ja": "ポップ&フレンドリー",
+      "personality": "明るくて面倒見のいい、近所の頼れる先生",
+      "keywords": ["元気", "安心", "まるっこい"],
+      "industries_good": [
+        "子ども向け教室全般（ピアノ・リトミック・英会話・体操・そろばん・プログラミング）",
+        "学習塾（実績表示は法規制を厳守）",
+        "親子向けイベント・キッズスペース・放課後デイ"
+      ],
+      "industries_bad": [
+        "士業・クリニック・整骨院など落ち着いた信頼で選ばれる業種",
+        "高単価サロン・ブランド系",
+        "高彩度が「軽い・安っぽい」に転ぶ大人向け商材全般"
+      ],
+      "colors": {
+        "bg": "#FFFFFF",
+        "bgAlt": "#FFF6EC",
+        "surface": "#FFFFFF",
+        "ink": "#2B2740",
+        "inkMuted": "#655F73",
+        "primary": "#D24310",
+        "onPrimary": "#FFFFFF",
+        "accent": "#2E9BCB",
+        "border": "#F3E7D8"
+      },
+      "fonts": {
+        "heading": "M PLUS Rounded 1c",
+        "body": "M PLUS Rounded 1c",
+        "accent": "Josefin Sans"
+      },
+      "spacingDefault": "--space-8",
+      "radiusAttitude": "--radius-full多用（ボタン・バッジ・タグは全部ピル、カードは--radius-md 8px）。影はB-10立体影と--shadow-softの2種まで",
+      "titleRecipes": ["T-01", "T-05"],
+      "buttonRecipes": ["B-10", "B-19/22"],
+      "photoTone": "明るい自然光・高彩度・クリーンなデジタル質感（グレイン禁止）。filter: saturate(1.25) contrast(1.1) brightness(1.06)",
+      "forbidden": [
+        "明るい黄色・パステル・空色の面に白文字を載せる（コントラスト不足）",
+        "合格実績の優良誤認（景表法。対象範囲・年度・根拠の明示なしや「全員合格」等）",
+        "紫グラデ背景・意味のない絵文字装飾・中央寄せの単調な縦積み"
+      ]
+    },
+    {
+      "id": "luxury",
+      "file": "06-luxury.md",
+      "name_ja": "ラグジュアリー",
+      "personality": "言葉少なに、余白と陰影だけで「特別」を語る、伏し目がちの上質",
+      "keywords": ["静寂", "気品", "非日常"],
+      "industries_good": [
+        "高単価の美容室・ヘアサロン（指名制・完全予約制）",
+        "エステ・スパ・ネイル・アイラッシュ等のパーソナルビューティ",
+        "ブライダル・フォトスタジオなど非日常の特別感を売る業種"
+      ],
+      "industries_bad": [
+        "低価格・回転重視のクイックサロン",
+        "子ども向け・ファミリー向けサービス",
+        "情報量が多く価格比較で選ばれる業態"
+      ],
+      "colors": {
+        "bg": "#F7F4EF",
+        "bgAlt": "#EFEBE3",
+        "surface": "#FCFAF6",
+        "ink": "#232020",
+        "inkMuted": "#615C58",
+        "primary": "#2B1418",
+        "onPrimary": "#F7F4EF",
+        "accent": "#A67C3D",
+        "border": "#DED8CE"
+      },
+      "fonts": {
+        "heading": "Shippori Mincho B1",
+        "body": "Zen Old Mincho",
+        "accent": "Italiana"
+      },
+      "spacingDefault": "--space-16",
+      "radiusAttitude": "角丸0（直角）でサイト内統一。影はほぼ使わない（罫線と余白で面を分ける。使っても--shadow-soft 1画面1箇所）",
+      "titleRecipes": ["T-35", "T-25"],
+      "buttonRecipes": ["B-03", "B-19", "B-25"],
+      "photoTone": "大きく・暗め・被写界深度浅め。ティール&オレンジ系スプリットトーン・低彩度（-20〜-30%）。filter: saturate(0.75) contrast(1.12) brightness(0.95)、グレイン極薄2〜5%まで",
+      "forbidden": [
+        "金accentを本文・小さな文字に使う（明るい地で3.44:1、本文基準未達）",
+        "余白を詰めて情報を敷き詰める（--space-16の「間」がこのトーンの武器）",
+        "ビフォーアフター写真の誇張演出・打消し表示頼みの体験談（景表法）"
+      ]
+    },
+    {
+      "id": "urban-bold",
+      "file": "07-urban-bold.md",
+      "name_ja": "アーバン・ボールド",
+      "personality": "汗と鉄と規律。甘えを削ぎ落とした、都会のストリート・ハードコア",
+      "keywords": ["ハイコントラスト", "スポーティ", "硬質"],
+      "industries_good": [
+        "パーソナルジム・24時間フィットネス",
+        "格闘技・ボクシングジム・クロスフィット",
+        "メンズ美容・バーバー・ストリート系アパレル・スポーツ用品"
+      ],
+      "industries_bad": [
+        "医療・クリニック（威圧感が不安を煽る）",
+        "子ども向け教室・和菓子・和食",
+        "女性向けリラクゼーション・士業"
+      ],
+      "colors": {
+        "bg": "#0E0E0F",
+        "bgAlt": "#161618",
+        "surface": "#1C1C1F",
+        "ink": "#F5F5F3",
+        "inkMuted": "#A8A8A5",
+        "primary": "#E8FF3C",
+        "onPrimary": "#111111",
+        "accent": "#E8FF3C",
+        "border": "#2E2E31"
+      },
+      "fonts": {
+        "heading": "Dela Gothic One",
+        "body": "M PLUS 1",
+        "accent": "Bebas Neue"
+      },
+      "spacingDefault": "--space-8",
+      "radiusAttitude": "角丸0（直角基調・硬質）。影は最小限（ホバーのlift相当1箇所まで）、階層は明度差・罫線・斜め境界（clip-path）で作る",
+      "titleRecipes": ["T-32", "T-11"],
+      "buttonRecipes": ["B-07", "B-15", "B-19/22"],
+      "photoTone": "硬い強コントラスト光・モノクロ〜低彩度（-40%以上）。filter: grayscale(0.85) contrast(1.3) brightness(0.96)、グレイン強め8〜15%",
+      "forbidden": [
+        "断定的な効果保証（景表法・優良誤認。「絶対痩せる」「必ず結果が出る」等）",
+        "ビフォーアフター写真を期間・頻度・食事指導の条件明示なしで載せる",
+        "黒×赤を強くしすぎる（威圧的になり初心者層・女性層を遠ざける）"
+      ]
+    },
+    {
+      "id": "local-simple",
+      "file": "08-local-simple.md",
+      "name_ja": "ローカル・シンプル",
+      "personality": "飾らない誠実さ。実物のままを見せ、電話番号と営業時間へ最短で届かせる実直な事業者",
+      "keywords": ["誠実", "実直", "即到達"],
+      "industries_good": [
+        "町の商店（金物店・米店・酒販などの個人商店）",
+        "小規模製造業・町工場",
+        "HP自体が営業マンになる、BtoB発注者と求職者の両方に誠実に伝えたい事業者"
+      ],
+      "industries_bad": [
+        "高単価・非日常を売る業種（美容サロン・ラグジュアリー系）",
+        "世界観の演出そのものが商品の業種（ブランド系・デザイン事務所）",
+        "子ども向け・にぎやかさが命の業種（教室・スクール）"
+      ],
+      "colors": {
+        "bg": "#FAF7F1",
+        "bgAlt": "#F0EBE1",
+        "surface": "#FFFFFF",
+        "ink": "#2A2723",
+        "inkMuted": "#5E574C",
+        "primary": "#1E3A5A",
+        "onPrimary": "#FFFFFF",
+        "accent": "#C06B33",
+        "border": "#DED7CA"
+      },
+      "fonts": {
+        "heading": "Zen Kaku Gothic New",
+        "body": "Zen Kaku Gothic New",
+        "accent": "Forum"
+      },
+      "spacingDefault": "--space-12",
+      "radiusAttitude": "角丸0（直角で統一。カード・画像・ボタンすべて）。影は最小限（--shadow-softを料金表・実績カードのみ）、境界は罫線で引く",
+      "titleRecipes": ["T-29", "T-07"],
+      "buttonRecipes": ["B-03", "B-19/22"],
+      "photoTone": "現場・機械・手元をほぼ素通しで見せるドキュメンタリー調（グレイン不使用）。filter: saturate(0.96) contrast(1.02)",
+      "forbidden": [
+        "採用ページの労働条件を実態と異なる内容で書く（職業安定法）",
+        "accent橙を小さい本文・キャプションの文字色に使う（3.64:1でAA未達）",
+        "電話番号・営業時間・所在地を装飾やスクロール演出の奥に隠す"
+      ]
+    }
+  ]
+}

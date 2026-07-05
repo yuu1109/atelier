@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+/* ===== LINE Seed JP（hisho / notto. / mono+ と統一） ===== */
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("/fonts/LINESeedJP-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("/fonts/LINESeedJP-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== デザイントークン（hisho = iOSシステムカラー準拠を移植） ===== */
+@theme {
+  /* ベース（systemGroupedBackground） */
+  --color-bg: #f2f2f7;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f2f2f7;
+  --color-surface-mute: #e5e5ea;
+  /* テキスト4段階 */
+  --color-ink: #1c1c1e;
+  --color-ink2: #6c6c70;
+  --color-ink3: #aeaeb2;
+  --color-ink4: #d1d1d6;
+  --color-line: rgba(60, 60, 67, 0.1);
+  /* プライマリ（systemBlue） */
+  --color-accent: #007aff;
+  --color-accent-soft: #e3f0ff;
+  /* ステータス */
+  --color-good: #34c759;
+  --color-good-bg: #e9f9ee;
+  --color-bad: #ff3b30;
+  --color-bad-bg: #ffe9e7;
+  --color-warn: #ff9500;
+  --color-warn-bg: #fff3e0;
+
+  /* 形 */
+  --radius-card: 16px;
+  --radius-cardlg: 24px;
+
+  /* 書体 */
+  --font-sans: "LINE Seed JP", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+
+  /* 影（浮遊要素のみに使う。フラット第一） */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-float: 0 6px 16px rgba(0, 0, 0, 0.12);
+  --shadow-chip: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* セクションラベル（英語・字間広め）: hisho の .section-label と同一 */
+.section-label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--color-ink3);
+  text-transform: uppercase;
+}
+
+/* 横スクロールのスクロールバーを隠す（タブ・チップ列） */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== トースト（hishoと同じ: 上からスライドイン → 上へフェードアウト） ===== */
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+}
+.anim-toast-in {
+  animation: toast-in 240ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+.anim-toast-out {
+  animation: toast-out 200ms ease-in both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anim-fade-in {
+  animation: fade-in 300ms ease-out both;
+}

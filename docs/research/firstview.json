@@ -1,0 +1,411 @@
+{
+  "meta": {
+    "title": "ファーストビュー（FV/hero）パターン集 マスターデータ",
+    "purpose": "FV専用のAI画像生成プロンプトを組み立てるツールのマスターデータ",
+    "createdAt": "2026-07-05",
+    "sources": [
+      "https://thinkbal.co.jp/magazine/web/first-view-design/",
+      "https://www.shift-jp.net/blog/web-design-firstView/",
+      "https://cone-c-slide.com/see-sla/blog/lp-first-view/",
+      "https://www.orizon.co/blog/common-hero-section-design-layouts-and-when-to-use-them",
+      "https://blog.logrocket.com/ux-design/hero-section-examples-best-practices/"
+    ]
+  },
+  "layouts": [
+    {
+      "id": "split-text-left",
+      "name": "左テキスト×右ビジュアル",
+      "desc": "画面を左右に分割し、左にコピーとCTA、右に写真を置く最も汎用的な型。Z法則の起点（左上）に情報が来るため読み順が自然で、メッセージと視覚的証拠を両立できる。",
+      "tones": ["誠実", "クリーン", "モダン", "信頼感"],
+      "industries": ["SaaS", "クリニック・歯科", "士業", "BtoBサービス", "学習塾"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。画面上端に高さの細いナビゲーションバー（左端にロゴ、右端に5つのテキストメニューと角丸の問い合わせボタン）。本文エリアは左右分割：左45%は明るい無地背景のテキストエリアで、上から順に大きな太字キャッチコピー2行、その下に小さめのサブコピー1行、その下に塗りつぶし角丸のCTAボタン1つと枠線のみのサブボタン1つを横並び、さらにその下に小さな実績バッジを3つ横並び。右55%は縁まで裁ち落とした大きな写真で、被写体は写真の中央やや右に配置し、視線や体の向きが左（テキスト側）を向いている。全体に余白が多く整然としたレイアウト。",
+      "promptEn": "16:9 website hero section. Thin top navigation bar with logo on the left, five text menu items and a rounded contact button on the right. Body split in two: left 45% is a clean solid-background text area containing, top to bottom, a large bold two-line headline, a smaller one-line subheadline, one filled rounded CTA button beside one outlined secondary button, and a row of three small achievement badges below. Right 55% is a full-bleed photograph, subject placed slightly right of center, facing toward the text on the left. Generous whitespace, orderly composition."
+    },
+    {
+      "id": "split-text-right",
+      "name": "右テキスト×左ビジュアル",
+      "desc": "左テキスト型のミラー。写真の被写体が右を向いている・写真側を先に見せて感情を掴みたいときに使う。視線の終点（右下）付近にCTAが来るためZ法則の締めとも相性が良い。",
+      "tones": ["エモーショナル", "上質", "モダン"],
+      "industries": ["美容・エステ", "ブライダル", "パーソナルジム", "リノベーション"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。上端に細いナビゲーションバー（左にロゴ、右にメニュー）。本文エリアは左右分割：左55%は縁まで裁ち落とした大きな写真で、被写体は中央やや左に置き、視線や動きが右（テキスト側）へ向かう。右45%は無地背景のテキストエリアで、大きなキャッチコピー2行、サブコピー1行、その下に目立つ色の角丸CTAボタン1つを縦に積む。テキストブロックは左揃えで、右下にCTAが視線の終点として収まる構図。",
+      "promptEn": "16:9 website hero. Thin top nav bar with logo left, menu right. Body split: left 55% is a full-bleed photograph with the subject slightly left of center, gaze and motion directed to the right toward the text. Right 45% is a solid-background text area stacking a large two-line headline, a one-line subheadline, and a single high-contrast rounded CTA button. Left-aligned text block, CTA landing near the bottom-right as the visual end point."
+    },
+    {
+      "id": "full-bleed-overlay",
+      "name": "全面写真×オーバーレイコピー",
+      "desc": "画面全体を1枚の写真で覆い、暗めのグラデーションを敷いて白文字のコピーを重ねる。世界観・空気感を一発で伝える没入型。写真の質がすべてを決める。",
+      "tones": ["ドラマチック", "上質", "情緒的", "高級感"],
+      "industries": ["ホテル・旅館", "レストラン", "美容室", "ブライダル", "観光"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。画面全体を縁まで1枚の高品質な写真が覆う。写真の下半分に黒の半透明グラデーションオーバーレイ（下端が濃く上に向かって透明になる）。左下エリアに白文字で大きなキャッチコピー2行とその下に小さなサブコピー1行、白い枠線のみのCTAボタン1つ。上端のナビゲーションは背景透過で白いロゴとメニューのみ。写真の主要被写体はコピーと重ならないよう画面右寄りか中央に配置。",
+      "promptEn": "16:9 website hero. A single high-quality photograph covers the entire frame edge to edge. A semi-transparent black gradient overlay darkens the lower half, fading upward. In the lower-left area, white text: a large two-line headline, a smaller one-line subheadline, and one white outlined CTA button. Transparent top navigation with white logo and menu items only. Key photographic subject positioned center-right so it never collides with the copy."
+    },
+    {
+      "id": "center-stack",
+      "name": "センター積み",
+      "desc": "キャッチ→サブ→CTAを中央揃えで縦に積む。1つの強いメッセージに集中させる型で、スタートアップの定番。背景は無地・グラデ・淡い抽象図形が合う。",
+      "tones": ["ミニマル", "先進的", "フラット", "スタートアップ"],
+      "industries": ["SaaS", "アプリ", "Webサービス", "キャンペーンLP", "イベント告知"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。背景は淡いグラデーション（1色から近い明度の別色へ）で、うっすらとした抽象的な図形やドットが浮かぶ。全要素を画面の水平中央に中央揃えで縦に積む：上端に細いナビゲーションバー、その下に小さなラベルバッジ（お知らせ風のピル型）、大きな太字キャッチコピー2行、サブコピー1行、塗りつぶしCTAボタンと枠線サブボタンの横並び、最下部に利用企業ロゴを5つ淡い色で横一列。左右対称の安定した構図で余白を広く取る。",
+      "promptEn": "16:9 website hero. Background is a soft gradient between two close-value colors with faint abstract shapes or dots. Everything is center-aligned and stacked vertically on the horizontal center: thin top nav bar, a small pill-shaped announcement badge, a large bold two-line headline, a one-line subheadline, a filled CTA button next to an outlined secondary button, and at the bottom a row of five client logos in muted gray. Symmetrical, stable composition with generous whitespace."
+    },
+    {
+      "id": "typography-hero",
+      "name": "タイポグラフィ主役",
+      "desc": "写真を使わず（または脇役に留め）、画面幅いっぱいの巨大な文字そのものをビジュアルにする。ブランドの態度や個性を最短距離で見せる。書体選びが命。",
+      "tones": ["尖った", "アート", "ハイブランド", "個性的", "ミニマル"],
+      "industries": ["デザイン事務所", "アパレル", "文化施設・ギャラリー", "音楽レーベル", "採用ブランディング"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。背景はほぼ無地（オフホワイトまたは濃色1色）。画面幅の85%を占める超巨大なタイポグラフィのキャッチコピーを2〜3行、左揃えで大胆に配置し、一部の単語だけ書体やスタイル（イタリック・アウトライン文字）を変えてリズムを作る。文字の行間に小さな切り抜き写真か図形を1つだけ挟み込む。右下に小さなサブコピーと下線付きテキストリンクのCTA。上端に極小のロゴとハンバーガーメニューのみ。写真より文字が主役の構図。",
+      "promptEn": "16:9 website hero. Nearly solid background (off-white or one deep color). An oversized typographic headline spanning 85% of the screen width, set in two or three left-aligned lines, with one or two words styled differently (italic or outlined letters) for rhythm. A single small cut-out photo or shape tucked between the lines of type. Small subcopy and an underlined text-link CTA in the lower right. Only a tiny logo and hamburger menu at the top. Type, not imagery, is the hero."
+    },
+    {
+      "id": "diagonal-split",
+      "name": "斜め分割",
+      "desc": "色面と写真を斜めのラインで分割し、動きとスピード感を出す。静的な左右分割に飽きたときの一手。角度は15〜25度程度が扱いやすい。",
+      "tones": ["エネルギッシュ", "スポーティ", "若々しい", "変革"],
+      "industries": ["フィットネス", "スポーツチーム", "採用サイト", "IT・テック", "専門学校"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。画面を左下から右上へ約20度の斜めラインで2分割。左側はビビッドな単色の色面で、太いサンセリフのキャッチコピー2行を斜めラインに沿わせず水平に置き、下に角丸CTAボタン。右側は動きのある写真（人物が動いている瞬間）を斜めの境界で裁ち落とす。境界線に沿って細いアクセントカラーのラインを1本走らせる。上端に横断するナビゲーションバー。全体にスピード感と勢いのある構図。",
+      "promptEn": "16:9 website hero. The frame is split in two by a diagonal line running at roughly 20 degrees from lower-left to upper-right. Left side: a vivid solid color field with a bold two-line sans-serif headline set horizontally, and a rounded CTA button below. Right side: an action photograph of a person in motion, cropped by the diagonal edge. A thin accent-color line traces the diagonal boundary. A nav bar spans the top. Dynamic, high-energy composition."
+    },
+    {
+      "id": "collage-hero",
+      "name": "コラージュ",
+      "desc": "切り抜き写真・紙片・手書き風の線やシールを複数散らして賑やかに構成する。手作り感・多様性・楽しさを演出。要素過多になりやすいので視線の中心を1つ決める。",
+      "tones": ["ポップ", "手作り感", "楽しい", "多様性", "クラフト"],
+      "industries": ["雑貨・クラフト", "学園祭・イベント", "採用（若手向け）", "地域メディア", "子ども向けサービス"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。紙のテクスチャの背景に、白フチ付きの切り抜き写真を4〜5枚、角度を少しずつ傾けて散らしたコラージュ。マスキングテープや丸いステッカー、手書き風の矢印と星の落書きを写真の周囲に添える。画面中央に最も大きな要素として、太いポップな書体のキャッチコピーを紙のラベルに載せて配置。左下にサブコピー、右下に手描き風の枠のCTAボタン。上端にシンプルなロゴとメニュー。賑やかだが中央のコピーに視線が集まる構成。",
+      "promptEn": "16:9 website hero. On a paper-textured background, a collage of four or five white-bordered cut-out photos scattered at slightly different angles, decorated with masking tape, round stickers, and hand-drawn doodle arrows and stars. The largest element in the center is a bold playful headline set on a paper label. Subcopy at lower left, a hand-drawn-frame CTA button at lower right. Simple logo and menu at top. Busy but with a clear focal point on the central copy."
+    },
+    {
+      "id": "product-hero",
+      "name": "商品ヒーロー",
+      "desc": "商品そのものを中央に大きく置き、背景を商品と調和する無地やグラデにする物撮り型。ライティングと影の質感が高級感を左右する。ECやD2Cの定番。",
+      "tones": ["高級感", "クリーン", "こだわり", "シズル感"],
+      "industries": ["コスメ・スキンケア", "食品・飲料", "ガジェット", "D2C全般", "ジュエリー"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。中央に商品を1つだけ大きく配置したスタジオ撮影風のビジュアル。背景は商品の色と調和した無地からのなだらかなグラデーションで、商品の下に柔らかい影、斜め上からのライティングでハイライトが立つ。商品の左上の空間に細めの上品な書体でキャッチコピー2行、その下にサブコピー1行。商品の右下の空間に価格表記と塗りつぶしの購入CTAボタン。周囲に商品の素材（花びら・水滴・原料など）を小さく浮遊させて世界観を補強。上端に細いナビゲーション。",
+      "promptEn": "16:9 website hero. A single product placed large in the center, studio-photography style. Background is a smooth gradient harmonized with the product color, soft shadow beneath the product, key light from upper diagonal creating crisp highlights. In the open space at upper left, an elegant thin-serif two-line headline with a one-line subheadline below. At lower right, a price tag and a filled purchase CTA button. Small floating ingredient elements (petals, droplets, raw materials) around the product to reinforce the mood. Thin navigation bar on top."
+    },
+    {
+      "id": "vertical-jp",
+      "name": "縦書き和風",
+      "desc": "縦書きのキャッチコピーと余白（間）で構成する和のレイアウト。右端に縦書きコピー、左に写真が定石。和紙・墨・金箔などの質感と好相性。",
+      "tones": ["和モダン", "伝統", "静謐", "格式", "職人"],
+      "industries": ["旅館・料亭", "和食・鮨", "伝統工芸", "茶道・華道", "寺社", "日本酒"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。背景は生成り色の和紙テクスチャ。画面右端から1割ほど内側に、明朝体の縦書きキャッチコピーを1〜2行、上端から下へ流す。画面左60%に和の被写体（料理・庭園・職人の手元）の写真を縦長にトリミングして配置し、写真の縁は裁ち落とすか細い墨色の罫線で囲む。右下に小さな朱印風の赤いロゴマーク。余白を非常に広く取り、要素は少なく、静けさと格式を感じる構図。ナビゲーションは上端に極小の横書きメニュー。",
+      "promptEn": "16:9 website hero, Japanese traditional style. Background of unbleached washi paper texture. About 10% in from the right edge, a vertical mincho-serif headline runs top to bottom in one or two columns. On the left 60%, a tall-cropped photograph of a Japanese subject (cuisine, garden, artisan hands), either full-bleed or framed with a thin sumi-ink rule. A small red seal-stamp style logo at lower right. Extremely generous negative space, very few elements, a sense of stillness and formality. Minimal horizontal menu at the very top."
+    },
+    {
+      "id": "photo-grid",
+      "name": "グリッド写真",
+      "desc": "複数の写真をグリッドやマソンリーで敷き詰め、実例の量と幅で信頼を作る。事例・作品・スタイルが商品そのものである業種に向く。中央にテキストブロックを重ねて視線を集める。",
+      "tones": ["実績重視", "ギャラリー", "洗練", "多彩"],
+      "industries": ["美容室・ネイル", "建築・施工事例", "フォトスタジオ", "不動産", "ポートフォリオ"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。画面全体に大小さまざまな写真を6枚、隙間の細いグリッド状に敷き詰める（大きい写真1枚＋中2枚＋小3枚のマソンリー構成）。写真はすべて同一トーンで統一。画面中央に白い長方形のテキストボックスを写真の上に重ね、その中に中央揃えでキャッチコピー2行、サブコピー1行、CTAボタン1つ。テキストボックスの周囲にわずかな影を付けて浮かせる。上端に細いナビゲーションバー。写真の物量で実績を語る構図。",
+      "promptEn": "16:9 website hero. The entire frame is tiled with six photographs in a tight-gap masonry grid (one large, two medium, three small), all color-graded to the same tone. A white rectangular text box floats over the center of the grid with a subtle drop shadow, containing a centered two-line headline, one-line subheadline, and a single CTA button. Thin navigation bar at the top. The sheer volume of photos communicates a track record."
+    },
+    {
+      "id": "cinematic-still",
+      "name": "動画風静止画（シネマティック）",
+      "desc": "映画のワンシーンのような1枚で、動画背景FVの雰囲気を静止画で再現する。レターボックス（上下黒帯）や字幕風コピーで映像感を演出。ストーリーを予感させる。",
+      "tones": ["シネマティック", "ドラマチック", "ストーリー", "余韻"],
+      "industries": ["ブランドサイト", "採用サイト", "観光・自治体PR", "ドキュメンタリー系メディア", "自動車"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。画面全体が映画のワンシーンのような写真：浅い被写界深度、逆光やマジックアワーの色温度、粒子感のあるシネマティックなカラーグレーディング。画面の上下に細い黒帯（レターボックス）を敷いて映像らしさを強調。画面下部中央に映画字幕風の細い白文字でキャッチコピー1行、その下にさらに小さくサブコピー。右下に小さな再生ボタン風の円形アイコンとCTAテキスト。ナビゲーションは透過で最小限。物語の途中を切り取ったような余韻のある構図。",
+      "promptEn": "16:9 website hero. The full frame is a single film-still-like photograph: shallow depth of field, backlight or magic-hour color temperature, grainy cinematic color grading. Thin black letterbox bars at top and bottom reinforce the movie feel. At bottom center, a single line of thin white subtitle-style headline text, with an even smaller subheadline beneath. A small circular play-button icon with CTA text at lower right. Minimal transparent navigation. The composition feels like a scene caught mid-story."
+    },
+    {
+      "id": "card-float",
+      "name": "カード浮遊（ガラスモーフィズム）",
+      "desc": "背景の写真やグラデの上に、半透明のすりガラス風カードを浮かべてテキストを載せる。背景の世界観と情報の可読性を両立できる。今風の質感。",
+      "tones": ["先進的", "透明感", "信頼とモダンの両立", "スマート"],
+      "industries": ["フィンテック・金融", "保険", "SaaS", "アプリ", "不動産テック"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。背景全面に少しぼかした写真または深い色のグラデーション。画面左寄りに、白の半透明ですりガラス質感（背景が透けてぼける）の大きな角丸カードを浮かべ、細い光の縁取りと柔らかい影を付ける。カードの中に左揃えでキャッチコピー2行、サブコピー1行、塗りつぶしCTAボタン、その下に小さな信頼バッジ（星評価と導入数）。背景の右側には被写体やUI要素をぼんやり見せる。上端に透過ナビゲーション。奥行きと透明感のあるレイヤー構成。",
+      "promptEn": "16:9 website hero. Full-frame background of a slightly blurred photo or deep-color gradient. Floating left of center, a large rounded frosted-glass card (translucent white, backdrop-blurred) with a thin light rim and soft shadow. Inside the card, left-aligned: a two-line headline, one-line subheadline, filled CTA button, and small trust badges (star rating and adoption count). The right background hints at a subject or UI elements out of focus. Transparent top navigation. Layered composition with depth and translucency."
+    },
+    {
+      "id": "magazine-editorial",
+      "name": "雑誌風エディトリアル",
+      "desc": "ファッション誌の表紙・見開きのような非対称グリッドと細身のセリフ体で組む。裁ち落とし写真＋小さな添え写真＋号数や日付風の飾りテキストが記号になる。",
+      "tones": ["ハイセンス", "エディトリアル", "上質", "感度が高い"],
+      "industries": ["アパレル", "ライフスタイルメディア", "美容・コスメ", "インテリア", "セレクトショップ"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。雑誌の見開きのような非対称レイアウト。右側3分の2に人物のファッション写真を縁まで裁ち落とし、左側3分の1はオフホワイトの余白に細身のセリフ体で大きなキャッチコピーを縦に3行、行頭を少しずつずらして配置。コピーの上に号数風の小さな飾りテキスト（vol.やissue風の英字）、下に細い罫線とサブコピー。左下に小さな正方形の添え写真を1枚。ナビゲーションは上端に細い英字メニュー。文字と写真の間の緊張感がある洗練された構図。",
+      "promptEn": "16:9 website hero, magazine-spread style. Asymmetric layout: right two-thirds is a full-bleed fashion photograph of a person; left third is off-white whitespace with a large thin-serif headline in three staggered lines. Above the headline, small issue-number style decorative text (like 'vol.' lettering); below it, a thin horizontal rule and subheadline. One small square supporting photo at lower left. Thin uppercase menu across the top. A refined composition with tension between type and image."
+    },
+    {
+      "id": "illustration-hero",
+      "name": "イラスト主役",
+      "desc": "写真の代わりにフラット・手描き・アイソメトリックなどのイラストを主役にする。抽象的なサービスの可視化や、柔らかく親しみやすい印象づくりに強い。写真素材が無い場合の解でもある。",
+      "tones": ["親しみやすい", "柔らかい", "カジュアル", "説明的", "安心感"],
+      "industries": ["SaaS・ITサービス", "教育・子育て", "自治体・公共", "医療（心療内科など柔らかく見せたい）", "人材サービス"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。左40%は無地背景のテキストエリアで、丸みのあるサンセリフの太いキャッチコピー2行、サブコピー1行、角丸の塗りつぶしCTAボタン。右60%に温かみのある配色のフラットイラスト：サービスを利用して笑顔になっている複数の人物、周囲に浮かぶアイコンや吹き出し、足元に抽象的な地面の形。イラストの一部（葉っぱや図形）が画面の縁からはみ出す。背景の下部を波形の色面で区切ってやわらかさを出す。上端にナビゲーションバー。全体に親しみやすく明るい印象。",
+      "promptEn": "16:9 website hero. Left 40% is a plain-background text area: bold rounded sans-serif two-line headline, one-line subheadline, filled rounded CTA button. Right 60% features a warm-palette flat illustration: several smiling people using the service, floating icons and speech bubbles around them, an abstract ground shape beneath. Some illustration elements (leaves, shapes) bleed past the frame edges. The lower background is divided by a soft wave-shaped color band. Navigation bar on top. Overall friendly and bright."
+    },
+    {
+      "id": "ui-screenshot-hero",
+      "name": "プロダクトUI提示型",
+      "desc": "センター積みや左テキストの下・横に、ブラウザ／スマホのモックアップに入れたプロダクト画面を大きく見せる。SaaSやアプリで「何ができるか」を一瞬で伝える定番。",
+      "tones": ["プロダクト主導", "先進的", "具体的", "テック"],
+      "industries": ["SaaS", "モバイルアプリ", "業務ツール", "ノーコード", "開発者向けサービス"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。上半分は中央揃えのテキスト：小さなピル型バッジ、大きな太字キャッチコピー2行、サブコピー1行、CTAボタン2つ横並び。下半分に、ブラウザウィンドウ枠（上部に3つの丸いボタン）に入ったプロダクトのダッシュボード画面を大きく配置し、下端は画面外に見切れさせる。ブラウザモックには柔らかい大きな影を付け、少しだけ奥に傾けた遠近感。その左右に小さなフローティングUIカード（グラフや通知）を浮かべる。背景は淡いグラデーションと細いグリッド線。上端にナビゲーションバー。",
+      "promptEn": "16:9 website hero. Top half: center-aligned text with a small pill badge, large bold two-line headline, one-line subheadline, and two CTA buttons side by side. Bottom half: a large product dashboard inside a browser-window mockup (three round dots at top), cropped off at the bottom edge of the frame, with a soft large shadow and a slight perspective tilt. Small floating UI cards (charts, notifications) hover at its sides. Background of subtle gradient with thin grid lines. Navigation bar at top."
+    },
+    {
+      "id": "bento-grid",
+      "name": "ベントーグリッド",
+      "desc": "大小の角丸カード（タイル）を弁当箱のように敷き詰め、キャッチ・写真・数字・機能を1画面で並列に見せる。情報量が多いサービスを整理して見せられる近年のトレンド型。",
+      "tones": ["整理された", "テック", "情報密度が高い", "モダン"],
+      "industries": ["多機能SaaS", "ポートフォリオ", "スタートアップ", "ガジェット", "データ系サービス"],
+      "prompt": "横長16:9のWebサイトのファーストビュー。画面全体を隙間が均等な角丸カードのグリッド（ベントーグリッド）で構成：左上に最も大きいカードを置き、その中に太いキャッチコピー2行とCTAボタン。残りのスペースに大きさの違うカードを5〜6枚敷き詰め、それぞれに写真1枚、大きな数字の実績（例：導入社数）、簡単なグラフ、機能アイコンと短いラベル、顔写真入りの一言コメントを入れる。カードの背景色は白ベースに1〜2枚だけアクセントカラー。背景はごく淡いグレー。上端に細いナビゲーションバー。整然としてリズムのあるタイル構成。",
+      "promptEn": "16:9 website hero composed as a bento grid of rounded cards with even gaps. The largest card at upper left holds a bold two-line headline and a CTA button. The remaining space is tiled with five or six cards of varying sizes: a photo, a big-number stat (e.g., customer count), a simple chart, feature icons with short labels, and a testimonial with a face photo. Cards are white with one or two accent-colored exceptions, on a very light gray background. Thin navigation bar on top. Orderly, rhythmic tiling."
+    }
+  ],
+  "elements": [
+    {
+      "id": "catch-copy",
+      "name": "キャッチコピー",
+      "priority": "must",
+      "purpose": "3秒で「誰に何を提供するか」を伝える主役。10〜25文字程度、最大でも2行。",
+      "notes": "FVで最も大きい文字要素にする。抽象語だけの飾りコピーにしない（copyPatternsのアンチパターン参照）。"
+    },
+    {
+      "id": "sub-copy",
+      "name": "サブコピー",
+      "priority": "recommended",
+      "purpose": "キャッチを補足し、具体性（対象・提供方法・差別化点）を1〜2行で足す。",
+      "notes": "キャッチが情緒ならサブは具体、キャッチが具体ならサブは補強。役割を重複させない。"
+    },
+    {
+      "id": "cta-primary",
+      "name": "CTAボタン（主）",
+      "priority": "must",
+      "purpose": "「次に何をすべきか」を1つに絞って示す。予約・問い合わせ・資料DL・購入など。",
+      "notes": "FV内で最も彩度の高い色にし、他要素と明確に差別化する。動詞で書く（例：無料で試す／今すぐ予約）。"
+    },
+    {
+      "id": "cta-secondary",
+      "name": "CTAボタン（副）",
+      "priority": "optional",
+      "purpose": "温度感が低いユーザー向けの逃げ道（詳しく見る／事例を見る）。",
+      "notes": "枠線のみ・テキストリンクなど主CTAより明確に弱く。主CTAと迷わせない。"
+    },
+    {
+      "id": "global-nav",
+      "name": "グローバルナビゲーション",
+      "priority": "must-corporate",
+      "purpose": "サイト全体の入口。コーポレートでは必須、LPでは意図的に消す・減らすのが定石。",
+      "notes": "ロゴ＋5±2項目＋問い合わせボタンが標準形。LPで残すと離脱経路になる。"
+    },
+    {
+      "id": "logo",
+      "name": "ロゴ",
+      "priority": "must",
+      "purpose": "「誰の」サイトかを示す。左上が定位置（Z/F法則の起点）。",
+      "notes": "LPでもロゴだけは残す（信頼の担保）。"
+    },
+    {
+      "id": "hero-visual",
+      "name": "メインビジュアル",
+      "priority": "must",
+      "purpose": "業種・空気感・品質を言葉より先に伝える。写真／イラスト／タイポ／UIスクショのいずれか。",
+      "notes": "「何の店・何のサービスか」が画像だけで分かるか？が判定基準。フリー素材感が出ると信頼が落ちる。"
+    },
+    {
+      "id": "trust-badges",
+      "name": "実績・受賞・メディア掲載バッジ",
+      "priority": "recommended",
+      "purpose": "数字と第三者評価で信頼を先出しする（導入社数・満足度・受賞・掲載媒体）。",
+      "notes": "3つ前後に絞る。盛りすぎると胡散臭くなる。数字は具体（1,200社 > 多数）。"
+    },
+    {
+      "id": "client-logos",
+      "name": "導入企業・取引先ロゴ",
+      "priority": "recommended-b2b",
+      "purpose": "BtoBの社会的証明。FV下端にグレースケールで並べるのが定番。",
+      "notes": "5〜7社。掲載許諾を確認すること。"
+    },
+    {
+      "id": "phone-number",
+      "name": "電話番号",
+      "priority": "must-local",
+      "purpose": "電話商圏のビジネス（飲食・医療・修理・士業）では即行動の最短経路。",
+      "notes": "右上またはCTA近くに受付時間とセットで。モバイルではタップ発信ボタンにする。"
+    },
+    {
+      "id": "business-hours",
+      "name": "営業時間・定休日",
+      "priority": "must-local",
+      "purpose": "店舗系で「今行けるか／今かけていいか」を即判断させる。",
+      "notes": "電話番号・住所とセットで1ブロックにまとめると探させない。"
+    },
+    {
+      "id": "location-access",
+      "name": "所在地・アクセス",
+      "priority": "must-local",
+      "purpose": "「どこにあるか」の原則に応える。駅名・徒歩分数・エリア名。",
+      "notes": "地域名はキャッチコピーに織り込むとSEO・即時理解の両方に効く（例：三鷹駅徒歩3分）。"
+    },
+    {
+      "id": "announcement-bar",
+      "name": "お知らせ・キャンペーン帯",
+      "priority": "optional",
+      "purpose": "期間限定オファーや重要告知をナビ上の細い帯で見せる。",
+      "notes": "LPでは緊急性の演出に有効。常設すると効果が薄れる。"
+    },
+    {
+      "id": "scroll-cue",
+      "name": "スクロール誘導",
+      "priority": "optional",
+      "purpose": "「下に続きがある」ことを示す矢印・SCROLLテキスト・見切れ要素。",
+      "notes": "次セクションの頭をFV下端に少し見切れさせるのが最も自然で効果的。"
+    },
+    {
+      "id": "sns-links",
+      "name": "SNSリンク",
+      "priority": "optional",
+      "purpose": "Instagram等が実質ポートフォリオになっている業種（美容・飲食・作家）で有効。",
+      "notes": "それ以外の業種ではFVに置かずフッターへ。離脱経路になるため。"
+    },
+    {
+      "id": "search-box",
+      "name": "検索窓・予約フォーム",
+      "priority": "conditional",
+      "purpose": "宿泊・不動産・求人など「探すこと」が主目的のサービスではFVの主役になる。",
+      "notes": "この型ではCTAボタンより検索フォームが主CTAになる。"
+    }
+  ],
+  "elementPrinciple": {
+    "name": "「誰の・何の店で・どこにあって・次に何をすべきか」原則",
+    "rule": "FVを3秒見ただけで次の4問に答えられなければ、そのFVは失格。(1) 誰の（どの会社・店の）サイトか → ロゴ・屋号。(2) 何の店・何のサービスか → メインビジュアル＋キャッチコピー。(3) どこにあるか（商圏があるなら）→ 地域名・駅名・アクセス。(4) 次に何をすべきか → CTA。",
+    "background": "ユーザーは最初の約3秒で読み進めるかを判断し、LPの直帰率は70%以上とも言われる。視線はZ型（左上→右上→左下→右下）またはF型に動くため、左上に「誰の・何の」、終点の右下付近に「次の行動」を置くのが基本形。",
+    "checkMethod": "3秒テスト：初見の人にFVを3秒だけ見せて閉じ、上の4問に口頭で答えてもらう。"
+  },
+  "copyPatterns": [
+    {
+      "id": "target-call",
+      "name": "ターゲット指名型",
+      "structure": "「〜な（悩みを持つ）あなた／方へ」と対象を名指しする",
+      "example": "夜、肩の痛みで目が覚める40代のあなたへ。",
+      "fit": "悩み解決型サービス（治療院・パーソナルジム・士業・買取）。LPと相性が良い。",
+      "caution": "対象を絞るほど刺さるが、絞りすぎると母数が減る。悩みの描写は具体的な場面で書く。"
+    },
+    {
+      "id": "benefit-assertion",
+      "name": "ベネフィット断言型",
+      "structure": "得られる結果を数字・期限つきで断言する",
+      "example": "最短30分、その日のうちに直します。",
+      "fit": "修理・買取・即日サービス・業務効率化SaaS。比較検討層に強い。",
+      "caution": "断言した以上、根拠（実績・仕組み）をFV内かすぐ下で示す。誇大表現は景表法・薬機法に注意。"
+    },
+    {
+      "id": "numbers-proof",
+      "name": "数字・実績型",
+      "structure": "創業年数・累計件数・シェア・満足度を主役にする",
+      "example": "この街で創業47年。屋根の修理、12,000件。",
+      "fit": "老舗・施工業・BtoB・医療。信頼が最重要の業種。",
+      "caution": "数字は1つに絞ると強い。出典・集計期間を小さく添えると誠実さが出る。"
+    },
+    {
+      "id": "question",
+      "name": "問いかけ型",
+      "structure": "読み手の現状に疑問を投げ、当事者意識を作る",
+      "example": "その保険料、あと20年払い続けますか？",
+      "fit": "見直し・乗り換え系（保険・通信・光熱費・税務）。潜在層の掘り起こし。",
+      "caution": "答えがNoで終わる問いにしない。問い→スクロールで答えが見つかる構成にする。"
+    },
+    {
+      "id": "local-anchor",
+      "name": "地域密着型",
+      "structure": "「地域名＋業種＋強み」で商圏を宣言する",
+      "example": "三鷹駅徒歩3分。土日もやってる歯医者です。",
+      "fit": "店舗ビジネス全般（医療・飲食・美容・教室）。ローカルSEOと相乗する。",
+      "caution": "地域名を入れるだけで満足しない。「＋α（土日診療・駐車場・夜間）」を必ず1つ足す。"
+    },
+    {
+      "id": "before-after",
+      "name": "変化提示型",
+      "structure": "Before（今の状態）→After（なれる状態）の落差を1文で見せる",
+      "example": "請求書づくりの3時間が、3分になる。",
+      "fit": "SaaS・教育・ダイエット・スキルスクール。変化が価値の商材。",
+      "caution": "Afterは盛らず実測ベースで。ビジュアルでもBefore/Afterを対で見せると強い。"
+    },
+    {
+      "id": "paradox",
+      "name": "逆説・意外性型",
+      "structure": "業界の常識を裏切る宣言で足を止めさせる",
+      "example": "売り込みません。見積もりも急かしません。",
+      "fit": "競合が多く差別化しにくい業種（工務店・不動産・保険代理店）。ブランディングにも効く。",
+      "caution": "逆説はフックにすぎない。直後に「なぜなら」を置かないとただの奇をてらいになる。"
+    },
+    {
+      "id": "scene-sensory",
+      "name": "情景・五感型",
+      "structure": "味・音・香り・手触りが浮かぶ具体的な場面を描写する",
+      "example": "炭の爆ぜる音から、今夜の一杯が始まる。",
+      "fit": "飲食・宿・食品EC・アロマなど体験が価値の業種。全面写真FVと好相性。",
+      "caution": "形容詞（美味しい・癒される）に逃げず、名詞と動詞で場面を書く。写真と内容を一致させる。"
+    },
+    {
+      "id": "declaration",
+      "name": "宣言・意志型",
+      "structure": "企業の立場・約束を具体的な対象と行動で宣言する",
+      "example": "この町の空き家を、10年で100軒よみがえらせる。",
+      "fit": "コーポレート・採用・ブランドサイト。理念に共感してほしい場面。",
+      "caution": "抽象宣言（想いをカタチに系）に最も転落しやすい型。固有名詞・数字・期限のどれかを必ず入れる。"
+    },
+    {
+      "id": "offer-direct",
+      "name": "オファー直球型",
+      "structure": "価格・特典・条件そのものを最大サイズで見せる",
+      "example": "初回体験60分 3,300円。今月は残り8枠。",
+      "fit": "LP・キャンペーン・広告連動ページ。今すぐ客の刈り取り。",
+      "caution": "コーポレートFVには不向き（安売り感が出る）。限定数・期限は事実のみ。広告とFVのオファーを一致させる。"
+    }
+  ],
+  "copyAntiPattern": {
+    "name": "抽象量産フレーズ（アンチパターン）",
+    "rule": "「想いをカタチに。」「未来を創造する」「あなたに寄り添う」「もっと自由に、もっと楽しく」「笑顔をお届けします」系の、どの会社が言っても成立するコピーは使わない。情報量がゼロで、3秒で「何の店か」に答えられないため。",
+    "test": "入れ替えテスト：そのコピーを競合他社・まったく別業種のサイトに載せても違和感がないなら捨てる。「うちしか言えないか？」で判定する。",
+    "fix": "抽象語を1つずつ「固有名詞・数字・場面」に置換する。例：「想いをカタチに」→「手描きの図面1枚から、注文家具をつくって38年」。"
+  },
+  "notes": {
+    "principles": [
+      "ユーザーは最初の約3秒で読むか離脱するかを決める。FVの仕事は「読む理由」を3秒で渡すこと。",
+      "視線はZ型/F型に流れる。左上＝誰の何のサイトか、右下＝次の行動（CTA）が基本配置。",
+      "1つのFVに主役は1つ。キャッチ・ビジュアル・CTAのどれを主役にするか先に決めてから配置する。",
+      "キャッチコピーは10〜25文字・最大2行。FV内で最も大きい文字にする。",
+      "CTAはFV内で最も目立つ色にし、動詞で書く。主CTAは1つに絞る。",
+      "モバイルでは左右分割が上下積みに変わる。FVパターンはPC/SPの2面で考える。",
+      "FV画像はLCP（表示速度指標）になりやすい。重い動画・非圧縮画像は避ける（実装時の注意）。"
+    ],
+    "lpVsCorporate": {
+      "summary": "LPのFVは「1つのオファーに向けた説得の開始点」、コーポレートのFVは「信頼と全体像の入口」。同じFVでも役割が別物なので、レイアウト・要素・コピーの選び方が変わる。",
+      "lp": {
+        "goal": "単一のコンバージョン（購入・予約・資料請求）に直行させる",
+        "nav": "グローバルナビは消すか最小化（離脱経路を断つ）。ロゴのみ残す",
+        "copy": "ベネフィット＋オファー＋緊急性。ターゲット指名型・オファー直球型・問いかけ型が主力",
+        "cta": "FV内に必ず主CTA。ボタンは1種類を繰り返す。マイクロコピー（30秒で完了・無料）を添える",
+        "elements": "実績バッジ・限定数・締切・価格を前倒しで見せる。広告クリエイティブとFVのメッセージを一致させる",
+        "layout": "センター積み／左テキスト×右ビジュアル／オファー直球のバナー型が定番。縦長ページの先頭として「続きを読ませる」引きも必要",
+        "kpi": "CVR・FV直帰率・スクロール到達率"
+      },
+      "corporate": {
+        "goal": "「誰の・何の会社か」を伝え、複数の目的（顧客・採用・IR・既存客）へ振り分ける",
+        "nav": "グローバルナビ必須。事業・会社情報・採用・お知らせ・問い合わせへの導線を揃える",
+        "copy": "宣言・意志型／数字・実績型／地域密着型が主力。売り文句よりも自己紹介と信頼",
+        "cta": "控えめでよい（問い合わせ・資料DL）。採用と事業など複数導線が並ぶこともある",
+        "elements": "お知らせ更新枠・導入企業ロゴ・受賞歴など「生きている会社」の証拠を置く",
+        "layout": "全面写真×オーバーレイ／シネマティック／タイポグラフィ主役など世界観重視の型が許される",
+        "kpi": "回遊率・指名検索・下層ページへの遷移"
+      },
+      "commonMistake": "コーポレートにLPの煽り（今すぐ！残りわずか！）を持ち込む、逆にLPで世界観だけ見せてオファー不在にする、の2つが典型的な取り違え。"
+    },
+    "promptComposition": {
+      "howToUse": "画像生成プロンプトは「layouts[].prompt（配置）＋被写体の具体（業種の人物・商品・店内）＋トーン指定（配色・質感・書体の雰囲気）＋『Webサイトのファーストビューのデザインカンプ』という枠指定」の順で合成する。",
+      "tips": [
+        "テキストは崩れやすいので『コピーはプレースホルダーのダミーテキストとして』と添えるか、生成後にテキストを載せ替える前提で組む。",
+        "アスペクト比は必ず明示（PC: 16:9 または 3:2、SP: 9:16）。",
+        "『UIデザインのモックアップ、デザインカンプ、Behanceに掲載されるような品質』などの枠語がレイアウトの再現性を上げる。",
+        "写真パートのスタイル（実写風/イラスト/3D）とライティングをレイアウトと独立に指定できるよう、プロンプトを配置と被写体で分けて管理する。",
+        "ネガティブ指定の定番：文字の破綻、要素の重なりすぎ、ウォーターマーク。"
+      ]
+    }
+  }
+}
