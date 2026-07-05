@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { MdAdd, MdOutlineFolder } from "react-icons/md";
+import { MdAdd, MdBolt, MdOutlineFolder } from "react-icons/md";
 import { navigate } from "../../lib/router";
+import { getKeys } from "../ai/keys";
 import { useProjectContext } from "../ProjectContext";
 import { createProject, validateProjectName } from "../lib/project";
 import { PHASE_LABEL, PHASE_ORDER, type Project } from "../lib/types";
@@ -62,8 +63,30 @@ export function ProjectList({ onToast }: { onToast: (msg: string) => void }) {
     }
   };
 
+  const hasAnthropicKey = Boolean(getKeys().anthropic);
+
   return (
     <main className="mx-auto w-full max-w-6xl px-5 pb-10">
+      {!hasAnthropicKey ? (
+        <div className="mb-4 flex items-start gap-3 rounded-cardlg bg-accent-soft p-4">
+          <MdBolt size={20} className="mt-0.5 shrink-0 text-accent" />
+          <div className="min-w-0 flex-1">
+            <p className="text-[13px] font-bold text-ink">APIキーを入れると、AIがツール内で直接動く</p>
+            <p className="mt-1 text-[12px] leading-relaxed text-ink2">
+              いまはキー未設定のコピペモード（プロンプトをコピー→外部AIの返答を貼り戻す）。
+              設定でAnthropicキーを1つ入れると、壁打ちも生成も貼り付けなしでワンクリック実行になる。
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => navigate({ kind: "settings" })}
+            className="shrink-0 rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
+          >
+            設定でキーを入れる
+          </button>
+        </div>
+      ) : null}
+
       <div className="mb-4 flex items-center justify-between">
         <p className="text-[13px] text-ink2">
           案件 {real.length} 件{loadingProjects ? "（読込中…）" : ""}
