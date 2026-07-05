@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { MdFileDownload, MdFileUpload, MdRestartAlt } from "react-icons/md";
 import type { ToolDef } from "../lib/types";
 import { exportAll, importAll } from "../lib/store";
+import { ModeSwitch } from "../studio/components/StudioHeader";
 
 /** ブランド + ツール切替タブ + ユーティリティ（書き出し/読み込み/リセット） */
 export function Header({
@@ -84,6 +85,7 @@ export function Header({
               className="hidden"
               onChange={(e) => void doImport(e.target.files?.[0])}
             />
+            <ModeSwitch current="tools" />
           </div>
         </div>
 

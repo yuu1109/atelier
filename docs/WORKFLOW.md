@@ -1,7 +1,13 @@
 # 半自動HP制作ワークフロー設計
 
-atelier. × HP制作ファクトリー（`~/Desktop/Project/HP/`）× Claude Code / Codex を束ねて、
+atelier. × HP制作ファクトリー（`~/Desktop/01_project/HP/`）× Claude Code / Codex を束ねて、
 「ヒアリングから公開まで、人間はデザイン判断だけやる」状態をつくるための設計書。
+
+> **2026-07 追記（v2で実装済み）**: 本書の構想はスタジオモード（`docs/STUDIO.md`）としてツール内に実装された。
+> Phase B〜E の入口が atelier スタジオに一本化され、`clients/{案件}/` のファイル契約で
+> Claude Code のスキル群（hearing / design-tones / wireframe / coding）と双方向に同期する。
+> 微調整エディタ構想の Step 1 も「微調整Tuner」フェーズ（tokens.css 直編集+ライブスペシメン）として実装済み。
+> 以下は元の設計メモとして残す。
 
 ## 全体像
 
