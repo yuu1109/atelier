@@ -98,7 +98,7 @@ export const STYLES: StylePreset[] = [
     label: "スタジオ実写",
     desc: "単色背景に均一光。人やモノを最もクリーンに見せる定番",
     tags: ["実写", "クリーン", "汎用"],
-    preview: { colors: ["#F2F2F2", "#4A4A4A"], texture: "flat" },
+    preview: { image: img("photo-studio") },
     prompt:
       "シームレスな単色背景でのスタジオ撮影。大型ソフトボックス2灯の柔らかい均一光で影は薄く一方向のみに落とす。85mm単焦点相当の自然な圧縮感で被写体をシャープに描写し、背景はわずかにトーンを落として被写体を浮き立たせる。強いノイズと過剰なレタッチ感は禁止。",
   },
@@ -190,7 +190,7 @@ export const STYLES: StylePreset[] = [
     label: "クリーンテック",
     desc: "白地×ブルーの細線アイコン。SaaS・ITの説明に信頼感を出す",
     tags: ["フラット", "テック", "信頼感"],
-    preview: { colors: ["#FFFFFF", "#2563EB"], texture: "flat" },
+    preview: { image: img("flat-cleantech") },
     prompt:
       "白 #FFFFFF を基調に、ブルー #2563EB を要所だけに効かせたフラットイラスト。均一な細線のアイコンとシンプルな図形で構成し、塗りは2〜3階調まで。整列とグリッドを厳守し余白を広く取る。グラデーション、ドロップシャドウ、立体表現は禁止。",
   },
@@ -345,7 +345,7 @@ export const STYLES: StylePreset[] = [
     label: "ゆるキャラ",
     desc: "丸くて脱力した2〜3色のキャラ。心理的ハードルを下げる",
     tags: ["イラスト", "ゆるい", "脱力"],
-    preview: { colors: ["#EFE6D8", "#B89968"], texture: "illustration" },
+    preview: { image: img("illust-yuru") },
     prompt:
       "丸みだけでできた脱力系のゆるいキャラクターイラスト。細部を極限まで省略した単純な形に点の目と小さな口を付け、色はベージュ #EFE6D8 の背景を含めて2〜3色に絞る。中央にぽつんと置いて余白を主役級に取る。描き込みの追加、リアルな体の比率、賑やかな背景は禁止。",
   },
