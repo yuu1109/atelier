@@ -68,6 +68,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
 
   const connect = useCallback(async () => {
     const s = await connectHpRoot();
+    if (!s) return; // ピッカーをキャンセルしただけ
     setStore(s);
     setConnection({ kind: "connected" });
     await refreshWith(s);

@@ -27,19 +27,54 @@ export function isFsaSupported(): boolean {
 
 const HANDLE_KEY = "hp-root";
 
+/** ユーザーがピッカーを閉じた/キャンセルしたことを示すエラーか */
+function isAbortError(e: unknown): boolean {
+  return e instanceof DOMException && e.name === "AbortError";
+}
+
+/** 選んだフォルダ直下のディレクトリ名を数件だけ拾う（案内メッセージ用。失敗しても空配列でよい） */
+async function peekSubdirNames(handle: FileSystemDirectoryHandle, limit = 6): Promise<string[]> {
+  const names: string[] = [];
+  try {
+    const it = (
+      handle as unknown as {
+        values: () => AsyncIterable<{ kind: string; name: string }>;
+      }
+    ).values();
+    for await (const entry of it) {
+      if (entry.kind === "directory") names.push(entry.name);
+      if (names.length >= limit) break;
+    }
+  } catch {
+    /* 列挙できない環境ではヒント無しで諦める */
+  }
+  return names;
+}
+
 /** HPルートを選ばせて接続する（ユーザージェスチャ内で呼ぶこと） */
-export async function connectHpRoot(): Promise<FsaFileStore> {
+export async function connectHpRoot(): Promise<FsaFileStore | null> {
   const picker = (
     window as unknown as {
       showDirectoryPicker: (o: object) => Promise<FileSystemDirectoryHandle>;
     }
   ).showDirectoryPicker;
-  const handle = await picker({ id: "hp-root", mode: "readwrite" });
+  let handle: FileSystemDirectoryHandle;
+  try {
+    handle = await picker({ id: "hp-root", mode: "readwrite" });
+  } catch (e) {
+    // ピッカーをキャンセルしただけなら何もしない（エラー扱いしない）
+    if (isAbortError(e)) return null;
+    throw e;
+  }
   // clients/ の存在で「正しいフォルダか」を検証
   try {
     await handle.getDirectoryHandle("clients");
   } catch {
-    throw new Error("選んだフォルダに clients/ が見つからない。HPファクトリーのルート（HP/）を選んでね");
+    const subdirs = await peekSubdirNames(handle);
+    const hint = subdirs.length > 0 ? `「${handle.name}」の中身: ${subdirs.join(", ")}` : `選んだフォルダ「${handle.name}」`;
+    throw new Error(
+      `${hint} に clients/ が見つからない。HPファクトリーのルート（clients/ を直下に持つ HP フォルダ）を選んでね`,
+    );
   }
   await idb.putHandle(HANDLE_KEY, handle);
   // 退避されにくいストレージにする（ベストエフォート）
