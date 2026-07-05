@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
-import { MdContentCopy, MdSend, MdUndo } from "react-icons/md";
+import { MdBolt, MdContentCopy, MdSend, MdUndo } from "react-icons/md";
 import { copyText } from "../../lib/clipboard";
+import { navigate } from "../../lib/router";
 import type { CoCreation } from "./session";
 
 /**
@@ -47,7 +48,7 @@ export function CoCreatePanel<T>({
       if (await copyText(prompt)) {
         setLastCopied(text);
         setPasteOpen(true);
-        onToast("プロンプトをコピーした。外部AIの返答JSONを下に貼ってね");
+        onToast("プロンプトをコピーした。外部AIの返答を下に貼ってね");
       } else {
         onToast("コピーできなかった…");
       }
@@ -85,10 +86,28 @@ export function CoCreatePanel<T>({
 
       <div ref={logRef} className="min-h-0 flex-1 space-y-3 overflow-y-auto p-4">
         {cocreate.history.length === 0 ? (
-          <p className="text-[12px] leading-relaxed text-ink3">
-            ここでAIと壁打ちしながら作っていく。
-            {cocreate.canRun ? "" : "（キー未設定のためコピペモード: プロンプトを外部AIに貼って、返答JSONを戻す）"}
-          </p>
+          cocreate.canRun ? (
+            <p className="text-[12px] leading-relaxed text-ink3">
+              ここでAIと壁打ちしながら作っていく。指示を書いて送ると、AIがその場で成果物を更新する。
+            </p>
+          ) : (
+            <div className="rounded-xl bg-accent-soft p-3">
+              <p className="flex items-center gap-1.5 text-[12px] font-bold text-ink">
+                <MdBolt size={14} className="text-accent" />
+                キーを入れると、ここで直接AIと壁打ちできる
+              </p>
+              <p className="mt-1 text-[11px] leading-relaxed text-ink2">
+                いまはキー未設定。送信すると外部AI用のプロンプトをコピーして、返ってきた内容を貼り戻す方式になる。
+              </p>
+              <button
+                type="button"
+                onClick={() => navigate({ kind: "settings" })}
+                className="mt-2 rounded-full bg-accent px-3 py-1.5 text-[11px] font-bold text-white transition-colors active:opacity-70"
+              >
+                設定でキーを入れる
+              </button>
+            </div>
+          )
         ) : null}
         {cocreate.history.map((m, i) => (
           <div key={i} className={m.role === "user" ? "flex justify-end" : "flex justify-start"}>
@@ -130,12 +149,12 @@ export function CoCreatePanel<T>({
 
       {pasteOpen ? (
         <div className="border-t border-line p-4">
-          <div className="mb-1.5 text-[12px] font-bold text-ink">外部AIの返答JSONを貼る</div>
+          <div className="mb-1.5 text-[12px] font-bold text-ink">外部AIの返答を貼る</div>
           <textarea
             value={pasted}
             onChange={(e) => setPasted(e.target.value)}
             rows={4}
-            placeholder='{"reply": "...", "artifact": {...}}'
+            placeholder="外部AIが返した内容をそのまま貼り付け"
             className="mb-2 w-full resize-y rounded-xl bg-surface-soft px-3 py-2 font-mono text-[12px] text-ink outline-none focus:ring-2 focus:ring-accent"
           />
           <div className="flex gap-2">

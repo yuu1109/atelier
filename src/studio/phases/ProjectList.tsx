@@ -73,7 +73,7 @@ export function ProjectList({ onToast }: { onToast: (msg: string) => void }) {
           <div className="min-w-0 flex-1">
             <p className="text-[13px] font-bold text-ink">APIキーを入れると、AIがツール内で直接動く</p>
             <p className="mt-1 text-[12px] leading-relaxed text-ink2">
-              いまはキー未設定のコピペモード（プロンプトをコピー→外部AIの返答を貼り戻す）。
+              いまはキー未設定のため、AIを使う所は「プロンプトをコピーして外部AIに投げ、返答を貼り戻す」手動モードになってる。
               設定でAnthropicキーを1つ入れると、壁打ちも生成も貼り付けなしでワンクリック実行になる。
             </p>
           </div>

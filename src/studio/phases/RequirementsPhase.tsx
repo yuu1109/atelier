@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { MdBolt } from "react-icons/md";
 import { Segment, TextArea, TextInput } from "../../components/controls";
+import { navigate } from "../../lib/router";
 import { anthropicProvider, hasAnthropicKey } from "../ai/anthropic";
 import { AiRunButton } from "../ai/fallback";
 import { findSection, parseMd, renderMd, upsertSection } from "../lib/markdown";
@@ -497,7 +499,7 @@ export function RequirementsPhase({ store, project, onToast }: PhaseProps) {
   const importPaste = () => {
     const p = coerceProposal(extractJson(paste));
     if (!p) {
-      onToast("JSONを読み取れなかった…出力形式を確認してね");
+      onToast("うまく読み取れなかった…外部AIの返答をそのまま貼ってね");
       return;
     }
     setForm(proposalToForm(p));
@@ -570,23 +572,48 @@ export function RequirementsPhase({ store, project, onToast }: PhaseProps) {
           />
         </div>
         {!hasAnthropicKey() ? (
-          <div className="mt-3 space-y-2 rounded-xl bg-surface-soft p-3">
-            <p className="text-[11px] font-bold text-ink2">外部AIの結果（JSON）を貼り戻す</p>
-            <textarea
-              value={paste}
-              onChange={(e) => setPaste(e.target.value)}
-              rows={5}
-              placeholder='{"threeC": { ... }, "persona": ...}'
-              className="w-full resize-y rounded-lg bg-surface px-3 py-2 font-mono text-[12px] text-ink placeholder:text-ink3 outline-none focus:ring-2 focus:ring-accent"
-            />
-            <button
-              type="button"
-              onClick={importPaste}
-              disabled={!paste.trim()}
-              className="rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
-            >
-              取り込む
-            </button>
+          <div className="mt-3">
+            <div className="flex items-start gap-3 rounded-xl bg-accent-soft p-4">
+              <MdBolt size={20} className="mt-0.5 shrink-0 text-accent" />
+              <div className="min-w-0 flex-1">
+                <p className="text-[13px] font-bold text-ink">APIキーを入れると、ここでそのまま提案が出る</p>
+                <p className="mt-1 text-[12px] leading-relaxed text-ink2">
+                  いまはキー未設定。設定でAnthropicキーを入れると、上の「AIで提案」がその場でワンクリック実行になる（コピペ不要）。
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => navigate({ kind: "settings" })}
+                className="shrink-0 rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
+              >
+                設定でキーを入れる
+              </button>
+            </div>
+            <details className="mt-3">
+              <summary className="cursor-pointer list-none text-[12px] text-ink3 transition-colors hover:text-ink2">
+                キーを使わず、手動で取り込む
+              </summary>
+              <div className="mt-3 space-y-2 rounded-xl bg-surface-soft p-3">
+                <p className="text-[12px] leading-relaxed text-ink2">
+                  上の「プロンプトをコピー」で外部AI（ChatGPTなど）に投げ、返ってきた内容をそのままここに貼ると取り込める。
+                </p>
+                <textarea
+                  value={paste}
+                  onChange={(e) => setPaste(e.target.value)}
+                  rows={5}
+                  placeholder="外部AIが返した内容をそのまま貼り付け"
+                  className="w-full resize-y rounded-lg bg-surface px-3 py-2 font-mono text-[12px] text-ink placeholder:text-ink3 outline-none focus:ring-2 focus:ring-accent"
+                />
+                <button
+                  type="button"
+                  onClick={importPaste}
+                  disabled={!paste.trim()}
+                  className="rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
+                >
+                  取り込む
+                </button>
+              </div>
+            </details>
           </div>
         ) : null}
       </section>

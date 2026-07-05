@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { MdBolt } from "react-icons/md";
 import { Section } from "../../components/Section";
 import { Segment, TextArea, TextInput } from "../../components/controls";
+import { navigate } from "../../lib/router";
 import type { Option, ToolState } from "../../lib/types";
 import { anthropicProvider, hasAnthropicKey } from "../ai/anthropic";
 import { AiRunButton } from "../ai/fallback";
@@ -260,26 +262,48 @@ function PasteTab({
       </section>
       {!hasKey ? (
         <section className="rounded-cardlg bg-surface p-5">
-          <div className="section-label mb-2.5">AIの返答JSONを貼り戻す</div>
-          <p className="mb-3 text-[12px] leading-relaxed text-ink2">
-            上のボタンでコピーしたプロンプトを外部AIに投げ、返ってきたJSONをここに貼って取り込む
-          </p>
-          <TextArea
-            value={jsonBack}
-            onChange={setJsonBack}
-            rows={8}
-            placeholder='{"basic_name": "みどり整骨院", ...}'
-          />
-          <div className="mt-3">
-            <button type="button" onClick={importJson} className={BTN_PRIMARY}>
-              JSONを取り込む
+          <div className="flex items-start gap-3 rounded-xl bg-accent-soft p-4">
+            <MdBolt size={20} className="mt-0.5 shrink-0 text-accent" />
+            <div className="min-w-0 flex-1">
+              <p className="text-[13px] font-bold text-ink">APIキーを入れると、貼るだけでAIが構造化する</p>
+              <p className="mt-1 text-[12px] leading-relaxed text-ink2">
+                いまはキー未設定。設定でAnthropicキーを入れると、上の「AIで構造化」がその場でワンクリック実行になる（コピペ不要）。
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => navigate({ kind: "settings" })}
+              className="shrink-0 rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
+            >
+              設定でキーを入れる
             </button>
           </div>
-          {jsonError ? (
-            <div className="mt-3 rounded-xl bg-bad-bg p-3 text-[12px] leading-relaxed text-bad">
-              {jsonError}
+          <details className="mt-3">
+            <summary className="cursor-pointer list-none text-[12px] text-ink3 transition-colors hover:text-ink2">
+              キーを使わず、手動で取り込む
+            </summary>
+            <div className="mt-3">
+              <p className="mb-3 text-[12px] leading-relaxed text-ink2">
+                上の「プロンプトをコピー」で外部AI（ChatGPTなど）に投げ、返ってきた内容をそのままここに貼ると取り込める。
+              </p>
+              <TextArea
+                value={jsonBack}
+                onChange={setJsonBack}
+                rows={8}
+                placeholder="外部AIが返した内容をそのまま貼り付け"
+              />
+              <div className="mt-3">
+                <button type="button" onClick={importJson} className={BTN_PRIMARY}>
+                  取り込む
+                </button>
+              </div>
+              {jsonError ? (
+                <div className="mt-3 rounded-xl bg-bad-bg p-3 text-[12px] leading-relaxed text-bad">
+                  {jsonError}
+                </div>
+              ) : null}
             </div>
-          ) : null}
+          </details>
         </section>
       ) : null}
     </div>
