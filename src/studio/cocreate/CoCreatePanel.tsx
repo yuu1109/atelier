@@ -77,7 +77,7 @@ export function CoCreatePanel<T>({
           type="button"
           disabled={!cocreate.canUndo}
           onClick={cocreate.undo}
-          className="flex items-center gap-1 rounded-full bg-surface-soft px-2.5 py-1 text-[11px] text-ink2 transition-colors active:opacity-70 disabled:opacity-40"
+          className="flex items-center gap-1 rounded-md bg-surface-soft px-2.5 py-1 text-[11px] text-ink2 transition-colors active:opacity-70 disabled:opacity-40"
         >
           <MdUndo size={12} />
           ひとつ戻す
@@ -102,7 +102,7 @@ export function CoCreatePanel<T>({
               <button
                 type="button"
                 onClick={() => navigate({ kind: "settings" })}
-                className="mt-2 rounded-full bg-accent px-3 py-1.5 text-[11px] font-bold text-white transition-colors active:opacity-70"
+                className="mt-2 rounded-md bg-ink px-3 py-1.5 text-[11px] font-bold text-white transition-colors active:opacity-70"
               >
                 設定でキーを入れる
               </button>
@@ -113,7 +113,7 @@ export function CoCreatePanel<T>({
           <div key={i} className={m.role === "user" ? "flex justify-end" : "flex justify-start"}>
             <div
               className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-[13px] leading-relaxed ${
-                m.role === "user" ? "bg-accent text-white" : "bg-surface-soft text-ink"
+                m.role === "user" ? "bg-ink text-white" : "bg-surface-soft text-ink"
               }`}
             >
               {m.text}
@@ -139,7 +139,7 @@ export function CoCreatePanel<T>({
               key={s}
               type="button"
               onClick={() => setInput(s)}
-              className="rounded-full bg-surface-soft px-3 py-1.5 text-[12px] text-ink2 transition-colors active:opacity-70"
+              className="rounded-md bg-surface-soft px-3 py-1.5 text-[12px] text-ink2 transition-colors active:opacity-70"
             >
               {s}
             </button>
@@ -161,14 +161,14 @@ export function CoCreatePanel<T>({
             <button
               type="button"
               onClick={applyPaste}
-              className="rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white active:opacity-70"
+              className="rounded-md bg-ink px-4 py-2 text-[12px] font-bold text-white active:opacity-70"
             >
               反映する
             </button>
             <button
               type="button"
               onClick={() => setPasteOpen(false)}
-              className="rounded-full bg-surface-soft px-4 py-2 text-[12px] text-ink2 active:opacity-70"
+              className="rounded-md bg-surface-soft px-4 py-2 text-[12px] text-ink2 active:opacity-70"
             >
               閉じる
             </button>
@@ -193,7 +193,7 @@ export function CoCreatePanel<T>({
             disabled={cocreate.busy || !input.trim()}
             onClick={() => void runSend()}
             aria-label={cocreate.canRun ? "送信" : "プロンプトをコピー"}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-white transition-colors active:opacity-70 disabled:opacity-40"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-white transition-colors active:opacity-70 disabled:opacity-40"
           >
             {cocreate.canRun ? <MdSend size={16} /> : <MdContentCopy size={15} />}
           </button>

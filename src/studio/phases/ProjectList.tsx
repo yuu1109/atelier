@@ -31,7 +31,7 @@ export function ProjectList({ onToast }: { onToast: (msg: string) => void }) {
         <button
           type="button"
           onClick={() => void connect().catch((e) => onToast(String(e.message ?? e)))}
-          className="rounded-full bg-accent px-5 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70"
+          className="rounded-md bg-ink px-5 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70"
         >
           フォルダを選んで接続
         </button>
@@ -80,7 +80,7 @@ export function ProjectList({ onToast }: { onToast: (msg: string) => void }) {
           <button
             type="button"
             onClick={() => navigate({ kind: "settings" })}
-            className="shrink-0 rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
+            className="shrink-0 rounded-md bg-ink px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
           >
             設定でキーを入れる
           </button>
@@ -94,7 +94,7 @@ export function ProjectList({ onToast }: { onToast: (msg: string) => void }) {
         <button
           type="button"
           onClick={() => setCreating(true)}
-          className="flex items-center gap-1 rounded-full bg-accent px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70"
+          className="flex items-center gap-1 rounded-md bg-ink px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70"
         >
           <MdAdd size={16} />
           新規案件
@@ -119,14 +119,14 @@ export function ProjectList({ onToast }: { onToast: (msg: string) => void }) {
               type="button"
               disabled={busy}
               onClick={() => void submitCreate()}
-              className="shrink-0 rounded-full bg-accent px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
+              className="shrink-0 rounded-md bg-ink px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
             >
               作成
             </button>
             <button
               type="button"
               onClick={() => setCreating(false)}
-              className="shrink-0 rounded-full bg-surface-soft px-4 py-2 text-[13px] text-ink2 transition-colors active:opacity-70"
+              className="shrink-0 rounded-md bg-surface-soft px-4 py-2 text-[13px] text-ink2 transition-colors active:opacity-70"
             >
               やめる
             </button>
@@ -181,7 +181,7 @@ function ProjectCard({ project }: { project: Project }) {
                 ? "bg-warn"
                 : "bg-surface-mute";
           return (
-            <span key={id} className="flex items-center gap-1 rounded-full bg-surface-soft px-2 py-0.5">
+            <span key={id} className="flex items-center gap-1 rounded-md bg-surface-soft px-2 py-0.5">
               <span className={`h-1.5 w-1.5 rounded-full ${color}`} />
               <span className="text-[10px] text-ink2">{PHASE_LABEL[id]}</span>
             </span>

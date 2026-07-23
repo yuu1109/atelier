@@ -1,57 +1,66 @@
 @import "tailwindcss";
 
-/* ===== LINE Seed JP（hisho / notto. / mono+ と統一） ===== */
+/* ===== M PLUS 1p（simple design system） ===== */
 @font-face {
-  font-family: "LINE Seed JP";
-  src: url("/fonts/LINESeedJP-Regular.woff2") format("woff2");
+  font-family: "M PLUS 1p";
+  src: url("/fonts/MPLUS1p-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "LINE Seed JP";
-  src: url("/fonts/LINESeedJP-Bold.woff2") format("woff2");
+  font-family: "M PLUS 1p";
+  src: url("/fonts/MPLUS1p-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "M PLUS 1p";
+  src: url("/fonts/MPLUS1p-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* ===== デザイントークン（hisho = iOSシステムカラー準拠を移植） ===== */
+/* ===== simple design system トークン（プリミティブ→セマンティック / Tailwind v4 @theme）
+   無彩色クローム・ヘアライン区切り・小さめ角丸・影はオーバーレイ専用。
+   正典: 01_project/02_自社開発/simple-design/DESIGN.md ===== */
 @theme {
-  /* ベース（systemGroupedBackground） */
-  --color-bg: #f2f2f7;
+  /* ベース（白） */
+  --color-bg: #ffffff;
   --color-surface: #ffffff;
-  --color-surface-soft: #f2f2f7;
-  --color-surface-mute: #e5e5ea;
+  --color-surface-soft: #fafafa;
+  --color-surface-mute: #f2f2f2;
   /* テキスト4段階 */
-  --color-ink: #1c1c1e;
-  --color-ink2: #6c6c70;
-  --color-ink3: #aeaeb2;
-  --color-ink4: #d1d1d6;
-  --color-line: rgba(60, 60, 67, 0.1);
-  /* プライマリ（systemBlue） */
-  --color-accent: #007aff;
-  --color-accent-soft: #e3f0ff;
-  /* ステータス */
-  --color-good: #34c759;
-  --color-good-bg: #e9f9ee;
-  --color-bad: #ff3b30;
-  --color-bad-bg: #ffe9e7;
-  --color-warn: #ff9500;
-  --color-warn-bg: #fff3e0;
+  --color-ink: #171717;
+  --color-ink2: #666666;
+  --color-ink3: #999999;
+  --color-ink4: #cccccc;
+  --color-line: #eaeaea;
+  /* インタラクティブの青1点（リンク・フォーカス） */
+  --color-accent: #0072f5;
+  --color-accent-soft: #dbeafe;
+  /* ステータス（Primer系・白地AA） */
+  --color-good: #1a7f37;
+  --color-good-bg: #dafbe1;
+  --color-bad: #cf222e;
+  --color-bad-bg: #ffebe9;
+  --color-warn: #9a6700;
+  --color-warn-bg: #fff8c5;
 
-  /* 形 */
-  --radius-card: 16px;
-  --radius-cardlg: 24px;
+  /* 形（小さめ角丸） */
+  --radius-card: 12px;
+  --radius-cardlg: 16px;
 
   /* 書体 */
-  --font-sans: "LINE Seed JP", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: "M PLUS 1p", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
 
-  /* 影（浮遊要素のみに使う。フラット第一） */
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-float: 0 6px 16px rgba(0, 0, 0, 0.12);
-  --shadow-chip: 0 1px 3px rgba(0, 0, 0, 0.04);
+  /* 影（simple: カードは影なし=ヘアライン。overlay のみ影。chip はヘアライン枠の代用） */
+  --shadow-card: none;
+  --shadow-float: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-chip: 0 0 0 1px #eaeaea;
 }
 
 html {
@@ -64,12 +73,12 @@ body {
   font-family: var(--font-sans);
 }
 
-/* セクションラベル（英語・字間広め）: hisho の .section-label と同一 */
+/* セクションラベル（simple: uppercase しない・字間控えめ） */
 .section-label {
   font-size: 11px;
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
   color: var(--color-ink3);
-  text-transform: uppercase;
 }
 
 /* 横スクロールのスクロールバーを隠す（タブ・チップ列） */
@@ -81,7 +90,7 @@ body {
   display: none;
 }
 
-/* ===== トースト（hishoと同じ: 上からスライドイン → 上へフェードアウト） ===== */
+/* ===== トースト（simple: 240ms in / 200ms out・退場を待って消す） ===== */
 @keyframes toast-in {
   from {
     opacity: 0;

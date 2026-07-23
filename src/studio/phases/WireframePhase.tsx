@@ -271,7 +271,7 @@ ${hearingText}`;
             <div className="mt-1 flex items-center gap-2">
               <h3 className="text-[15px] font-bold text-ink">ワイヤーフレーム壁打ち</h3>
               {fixed ? (
-                <span className="flex items-center gap-1 rounded-full bg-good-bg px-2.5 py-0.5 text-[11px] font-bold text-good">
+                <span className="flex items-center gap-1 rounded-md bg-good-bg px-2.5 py-0.5 text-[11px] font-bold text-good">
                   <MdLock size={11} />
                   フィックス済み
                 </span>
@@ -286,7 +286,7 @@ ${hearingText}`;
               type="button"
               disabled={!plan || busyFile}
               onClick={onExportClick}
-              className="flex items-center gap-1.5 rounded-full bg-accent px-4 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
+              className="flex items-center gap-1.5 rounded-md bg-ink px-4 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
             >
               <MdSaveAlt size={15} />
               wireframe/index.html に書き出し
@@ -295,7 +295,7 @@ ${hearingText}`;
               type="button"
               disabled={!hasIndex || busyFile}
               onClick={() => void doFix()}
-              className="flex items-center gap-1.5 rounded-full bg-surface-soft px-4 py-2.5 text-[13px] font-bold text-ink2 transition-colors active:opacity-70 disabled:opacity-40"
+              className="flex items-center gap-1.5 rounded-md bg-surface-soft px-4 py-2.5 text-[13px] font-bold text-ink2 transition-colors active:opacity-70 disabled:opacity-40"
               title="index.html を wireframe-fixed.html に複製して凍結する"
             >
               <MdLock size={14} />
@@ -334,7 +334,7 @@ ${hearingText}`;
                 type="button"
                 disabled={!previewHtml}
                 onClick={openInNewTab}
-                className="flex items-center gap-1 rounded-full bg-surface-soft px-3 py-1.5 text-[12px] text-ink2 transition-colors active:opacity-70 disabled:opacity-40"
+                className="flex items-center gap-1 rounded-md bg-surface-soft px-3 py-1.5 text-[12px] text-ink2 transition-colors active:opacity-70 disabled:opacity-40"
               >
                 <MdOpenInNew size={13} />
                 別タブで開く
@@ -508,7 +508,7 @@ ${hearingText}`;
               <button
                 type="button"
                 onClick={() => setMemo((m) => ({ ...m, open: false }))}
-                className="rounded-full bg-surface-soft px-4 py-2 text-[12px] text-ink2 transition-colors active:opacity-70"
+                className="rounded-md bg-surface-soft px-4 py-2 text-[12px] text-ink2 transition-colors active:opacity-70"
               >
                 キャンセル
               </button>
@@ -519,7 +519,7 @@ ${hearingText}`;
                   setMemo((m) => ({ ...m, open: false }));
                   void doExport({ instruction: memo.instruction, action: memo.action });
                 }}
-                className="rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
+                className="rounded-md bg-ink px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
               >
                 追記して書き出す
               </button>

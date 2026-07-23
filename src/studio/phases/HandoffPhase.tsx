@@ -126,7 +126,7 @@ export function HandoffPhase({ store, project, onToast }: PhaseProps) {
           <button
             type="button"
             onClick={() => navigate({ kind: "project", project, phase: "tuning" })}
-            className="shrink-0 rounded-full bg-good px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70"
+            className="shrink-0 rounded-md bg-good px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70"
           >
             微調整フェーズへ
           </button>
@@ -168,7 +168,7 @@ export function HandoffPhase({ store, project, onToast }: PhaseProps) {
                 type="button"
                 disabled={busy}
                 onClick={() => void generateSpec()}
-                className="shrink-0 rounded-full bg-accent px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
+                className="shrink-0 rounded-md bg-ink px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
               >
                 {busy ? "生成中…" : specMd ? "再生成" : "生成する"}
               </button>
@@ -187,7 +187,7 @@ export function HandoffPhase({ store, project, onToast }: PhaseProps) {
                 <button
                   type="button"
                   onClick={() => void copy(specMd, "spec.md")}
-                  className="mt-3 rounded-full bg-surface-soft px-4 py-2 text-[12px] font-bold text-ink2 transition-colors active:opacity-70"
+                  className="mt-3 rounded-md bg-surface-soft px-4 py-2 text-[12px] font-bold text-ink2 transition-colors active:opacity-70"
                 >
                   spec.md をコピー
                 </button>
@@ -228,7 +228,7 @@ export function HandoffPhase({ store, project, onToast }: PhaseProps) {
               <button
                 type="button"
                 onClick={() => void markHandoff()}
-                className="shrink-0 rounded-full bg-surface-soft px-4 py-2 text-[13px] font-bold text-ink2 transition-colors active:opacity-70"
+                className="shrink-0 rounded-md bg-surface-soft px-4 py-2 text-[13px] font-bold text-ink2 transition-colors active:opacity-70"
               >
                 引き渡し済みにする
               </button>
@@ -262,7 +262,7 @@ function GateCard({
       <button
         type="button"
         onClick={onGo}
-        className="shrink-0 rounded-full bg-accent px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70"
+        className="shrink-0 rounded-md bg-ink px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70"
       >
         {buttonLabel}
       </button>
@@ -293,7 +293,7 @@ function KickoffCard({
       <button
         type="button"
         onClick={onCopy}
-        className="mt-3 self-start rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
+        className="mt-3 self-start rounded-md bg-ink px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
       >
         コマンドをコピー
       </button>

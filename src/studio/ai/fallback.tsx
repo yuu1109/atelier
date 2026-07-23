@@ -31,8 +31,8 @@ export function AiRunButton({
   const hasKey = Boolean(getKeys()[keyKind]);
   const cls =
     size === "sm"
-      ? "gap-1 rounded-full px-3 py-1.5 text-[12px]"
-      : "gap-1.5 rounded-full px-4 py-2.5 text-[13px]";
+      ? "gap-1 rounded-md px-3 py-1.5 text-[12px]"
+      : "gap-1.5 rounded-md px-4 py-2.5 text-[13px]";
 
   if (!hasKey) {
     return (
@@ -62,7 +62,7 @@ export function AiRunButton({
       type="button"
       disabled={disabled || running}
       onClick={() => void onRun()}
-      className={`flex items-center font-bold ${cls} bg-accent text-white transition-colors active:opacity-70 disabled:opacity-40`}
+      className={`flex items-center font-bold ${cls} bg-ink text-white transition-colors active:opacity-70 disabled:opacity-40`}
     >
       <MdAutoAwesome size={size === "sm" ? 13 : 15} className={running ? "animate-pulse" : ""} />
       {running ? "生成中…" : label}

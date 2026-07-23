@@ -43,7 +43,7 @@ export function Header({
   };
 
   return (
-    <header className="sticky top-0 z-30 bg-bg/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-30 border-b border-line bg-bg/95 backdrop-blur-sm">
       <div className="mx-auto w-full max-w-6xl px-5 pb-3 pt-5">
         <div className="mb-3 flex items-end justify-between">
           <div className="flex items-baseline gap-3">
@@ -55,7 +55,7 @@ export function Header({
               type="button"
               onClick={doExport}
               title="設定をJSONで書き出し"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-surface text-ink2 transition-colors active:opacity-70"
+              className="flex h-9 w-9 items-center justify-center rounded-md text-ink2 transition-colors hover:bg-surface-soft active:opacity-70"
               aria-label="設定を書き出し"
             >
               <MdFileDownload size={17} />
@@ -64,7 +64,7 @@ export function Header({
               type="button"
               onClick={() => fileRef.current?.click()}
               title="設定JSONを読み込み"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-surface text-ink2 transition-colors active:opacity-70"
+              className="flex h-9 w-9 items-center justify-center rounded-md text-ink2 transition-colors hover:bg-surface-soft active:opacity-70"
               aria-label="設定を読み込み"
             >
               <MdFileUpload size={17} />
@@ -73,7 +73,7 @@ export function Header({
               type="button"
               onClick={onReset}
               title="このツールの入力をリセット"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-surface text-ink2 transition-colors active:opacity-70"
+              className="flex h-9 w-9 items-center justify-center rounded-md text-ink2 transition-colors hover:bg-surface-soft active:opacity-70"
               aria-label="このツールをリセット"
             >
               <MdRestartAlt size={17} />
@@ -90,7 +90,7 @@ export function Header({
         </div>
 
         <nav className="scrollbar-none -mx-5 overflow-x-auto px-5">
-          <div className="inline-flex gap-1 rounded-full bg-surface p-1">
+          <div className="inline-flex gap-0.5 rounded-md bg-surface-mute p-0.5">
             {tools.map((t) => {
               const active = t.id === activeId;
               return (
@@ -98,8 +98,8 @@ export function Header({
                   key={t.id}
                   type="button"
                   onClick={() => onSelect(t.id)}
-                  className={`shrink-0 rounded-full px-3.5 py-2 text-[13px] transition-colors active:opacity-70 ${
-                    active ? "bg-accent font-bold text-white" : "text-ink2"
+                  className={`shrink-0 rounded-md px-3.5 py-2 text-[13px] transition-colors active:opacity-70 ${
+                    active ? "bg-surface font-bold text-ink shadow-chip" : "text-ink2"
                   }`}
                 >
                   {t.name}

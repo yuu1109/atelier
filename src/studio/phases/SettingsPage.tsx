@@ -34,7 +34,7 @@ export function SettingsPage({ onToast }: { onToast: (msg: string) => void }) {
           <button
             type="button"
             onClick={() => void connect().catch((e) => onToast(String(e.message ?? e)))}
-            className="rounded-full bg-accent px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70"
+            className="rounded-md bg-ink px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70"
           >
             {connection.kind === "connected" ? "別のフォルダに接続し直す" : "フォルダを選んで接続"}
           </button>
@@ -42,7 +42,7 @@ export function SettingsPage({ onToast }: { onToast: (msg: string) => void }) {
             <button
               type="button"
               onClick={() => void disconnect()}
-              className="rounded-full bg-surface-soft px-4 py-2 text-[13px] text-ink2 transition-colors active:opacity-70"
+              className="rounded-md bg-surface-soft px-4 py-2 text-[13px] text-ink2 transition-colors active:opacity-70"
             >
               接続を解除
             </button>
@@ -140,14 +140,14 @@ function KeyField({
               setDraft("");
               setEditing(false);
             }}
-            className="shrink-0 rounded-full bg-accent px-3.5 py-1.5 text-[12px] font-bold text-white active:opacity-70"
+            className="shrink-0 rounded-md bg-ink px-3.5 py-1.5 text-[12px] font-bold text-white active:opacity-70"
           >
             保存
           </button>
           <button
             type="button"
             onClick={() => setEditing(false)}
-            className="shrink-0 rounded-full bg-surface-soft px-3.5 py-1.5 text-[12px] text-ink2 active:opacity-70"
+            className="shrink-0 rounded-md bg-surface-soft px-3.5 py-1.5 text-[12px] text-ink2 active:opacity-70"
           >
             やめる
           </button>
@@ -160,7 +160,7 @@ function KeyField({
           <button
             type="button"
             onClick={() => setEditing(true)}
-            className="shrink-0 rounded-full bg-surface-soft px-3.5 py-1.5 text-[12px] text-ink2 active:opacity-70"
+            className="shrink-0 rounded-md bg-surface-soft px-3.5 py-1.5 text-[12px] text-ink2 active:opacity-70"
           >
             変更
           </button>
@@ -168,7 +168,7 @@ function KeyField({
             <button
               type="button"
               onClick={() => onSave("")}
-              className="shrink-0 rounded-full bg-bad-bg px-3.5 py-1.5 text-[12px] font-bold text-bad active:opacity-70"
+              className="shrink-0 rounded-md bg-bad-bg px-3.5 py-1.5 text-[12px] font-bold text-bad active:opacity-70"
             >
               削除
             </button>

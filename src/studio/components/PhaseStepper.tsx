@@ -25,7 +25,7 @@ export function PhaseStepper({ project, current }: { project: string; current: P
 
   return (
     <nav className="scrollbar-none -mx-5 mb-5 overflow-x-auto px-5">
-      <div className="inline-flex gap-1 rounded-full bg-surface p-1">
+      <div className="inline-flex gap-0.5 rounded-md bg-surface-mute p-0.5">
         {PHASE_ORDER.map((id) => {
           const active = id === current;
           const st = phases?.[id];
@@ -40,8 +40,8 @@ export function PhaseStepper({ project, current }: { project: string; current: P
               key={id}
               type="button"
               onClick={() => navigate({ kind: "project", project, phase: id })}
-              className={`flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-[13px] transition-colors active:opacity-70 ${
-                active ? "bg-accent font-bold text-white" : "text-ink2"
+              className={`flex shrink-0 items-center gap-1.5 rounded-md px-3.5 py-2 text-[13px] transition-colors active:opacity-70 ${
+                active ? "bg-surface font-bold text-ink shadow-chip" : "text-ink2"
               }`}
             >
               <span className={`h-1.5 w-1.5 rounded-full ${active ? "bg-white" : dot}`} />

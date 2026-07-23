@@ -3,8 +3,9 @@ import type { CSSProperties } from "react";
 import type { Option } from "../lib/types";
 
 /**
- * フォームコントロール集（hishoトーン）。
- * フラット第一・白カード上では surface-soft の面で構造を出す。
+ * フォームコントロール集（simple design system）。
+ * 無彩色クローム・白地/ヘアライン区切り・小さめ角丸（ピル禁止）。
+ * 選択は fill/ink＋ヘアライン枠で出し、色（accent）はリンク・フォーカスだけに使う。
  * 押せるものは active:opacity-70 + transition-colors。
  */
 
@@ -19,7 +20,7 @@ export function Segment({
   onChange: (v: string) => void;
 }) {
   return (
-    <div className="inline-flex max-w-full flex-wrap gap-0.5 rounded-full bg-surface-mute p-0.5">
+    <div className="inline-flex max-w-full flex-wrap gap-0.5 rounded-md bg-surface-mute p-0.5">
       {options.map((o) => {
         const active = o.value === value;
         return (
@@ -27,7 +28,7 @@ export function Segment({
             key={o.value}
             type="button"
             onClick={() => onChange(o.value)}
-            className={`rounded-full px-3.5 py-1.5 text-[13px] transition-colors active:opacity-70 ${
+            className={`rounded px-3.5 py-1.5 text-[13px] transition-colors active:opacity-70 ${
               active ? "bg-surface font-bold text-ink shadow-chip" : "text-ink2"
             }`}
           >
@@ -39,7 +40,7 @@ export function Segment({
   );
 }
 
-/* ===== ピル群（単一 or 複数選択） ===== */
+/* ===== ピル群（単一 or 複数選択・simple: 角丸チップ） ===== */
 export function Pills({
   options,
   value,
@@ -62,7 +63,7 @@ export function Pills({
       }
       onChange([...next]);
     } else {
-      // 単一選択は同じピルをもう一度押すと解除（任意項目で「選ばない」に戻せる）
+      // 単一選択は同じチップをもう一度押すと解除
       onChange(selected.has(v) ? "" : v);
     }
   };
@@ -76,8 +77,8 @@ export function Pills({
             type="button"
             onClick={() => toggle(o.value)}
             title={o.desc}
-            className={`rounded-full px-3 py-1.5 text-[13px] transition-colors active:opacity-70 ${
-              active ? "bg-accent font-bold text-white" : "bg-surface-soft text-ink2"
+            className={`rounded-md px-3 py-1.5 text-[13px] transition-colors active:opacity-70 ${
+              active ? "bg-surface-mute font-bold text-ink shadow-chip" : "bg-surface-soft text-ink2"
             }`}
           >
             {o.label}
@@ -165,16 +166,16 @@ export function Cards({
             type="button"
             onClick={() => onChange(active ? "" : o.value)}
             className={`rounded-xl border p-3 text-left transition-colors active:opacity-70 ${
-              active ? "border-accent bg-accent-soft" : "border-transparent bg-surface-soft"
+              active ? "border-ink bg-surface-soft" : "border-line bg-surface-soft"
             }`}
           >
             {o.preview ? <PresetSwatch preview={o.preview} /> : null}
-            <span className={`block text-[13px] font-bold ${active ? "text-accent" : "text-ink"}`}>{o.label}</span>
+            <span className={`block text-[13px] font-bold ${active ? "text-ink" : "text-ink"}`}>{o.label}</span>
             {o.desc ? <span className="mt-0.5 block text-[11px] leading-relaxed text-ink2">{o.desc}</span> : null}
             {o.tags && o.tags.length > 0 ? (
               <span className="mt-1.5 flex flex-wrap gap-1">
                 {o.tags.map((t) => (
-                  <span key={t} className="rounded-full bg-surface px-1.5 py-0.5 text-[10px] text-ink3">
+                  <span key={t} className="rounded-md bg-surface-mute px-1.5 py-0.5 text-[10px] text-ink3">
                     {t}
                   </span>
                 ))}
@@ -187,7 +188,7 @@ export function Cards({
   );
 }
 
-/* ===== テキスト入力 ===== */
+/* ===== テキスト入力（simple: 白地＋ヘアライン＋focusはlinkリング） ===== */
 export function TextInput({
   value,
   onChange,
@@ -203,7 +204,7 @@ export function TextInput({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className="w-full rounded-xl bg-surface-soft px-3 py-2.5 text-[15px] text-ink placeholder:text-ink3 outline-none focus:ring-2 focus:ring-accent"
+      className="w-full rounded-md border border-line bg-surface px-3 py-2.5 text-[15px] text-ink placeholder:text-ink3 outline-none focus:ring-2 focus:ring-accent focus:border-accent"
     />
   );
 }
@@ -225,12 +226,12 @@ export function TextArea({
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
       rows={rows}
-      className="w-full resize-y rounded-xl bg-surface-soft px-3 py-2.5 text-[14px] leading-relaxed text-ink placeholder:text-ink3 outline-none focus:ring-2 focus:ring-accent"
+      className="w-full resize-y rounded-md border border-line bg-surface px-3 py-2.5 text-[14px] leading-relaxed text-ink placeholder:text-ink3 outline-none focus:ring-2 focus:ring-accent focus:border-accent"
     />
   );
 }
 
-/* ===== 数値ステッパー ===== */
+/* ===== 数値ステッパー（simple: 角丸ボタン＋ヘアライン） ===== */
 export function Stepper({
   value,
   onChange,
@@ -249,7 +250,7 @@ export function Stepper({
         type="button"
         onClick={() => step(-1)}
         disabled={value <= min}
-        className="flex h-8 w-8 items-center justify-center rounded-full bg-surface-soft text-[17px] text-ink transition-colors active:opacity-70 disabled:opacity-40 disabled:active:opacity-40"
+        className="flex h-8 w-8 items-center justify-center rounded-md border border-line bg-surface text-[17px] text-ink transition-colors active:opacity-70 hover:bg-surface-soft disabled:opacity-40 disabled:active:opacity-40"
         aria-label="減らす"
       >
         −
@@ -259,7 +260,7 @@ export function Stepper({
         type="button"
         onClick={() => step(1)}
         disabled={value >= max}
-        className="flex h-8 w-8 items-center justify-center rounded-full bg-surface-soft text-[17px] text-ink transition-colors active:opacity-70 disabled:opacity-40 disabled:active:opacity-40"
+        className="flex h-8 w-8 items-center justify-center rounded-md border border-line bg-surface text-[17px] text-ink transition-colors active:opacity-70 hover:bg-surface-soft disabled:opacity-40 disabled:active:opacity-40"
         aria-label="増やす"
       >
         ＋
@@ -268,7 +269,7 @@ export function Stepper({
   );
 }
 
-/* ===== iOSスイッチ（ONは緑 = hisho流） ===== */
+/* ===== スイッチ（simple: ONは ink 地・無彩色） ===== */
 export function Toggle({
   value,
   onChange,
@@ -290,7 +291,7 @@ export function Toggle({
           className="peer sr-only"
         />
         <span
-          className={`absolute inset-0 rounded-full transition-colors ${value ? "bg-good" : "bg-surface-mute"}`}
+          className={`absolute inset-0 rounded-full transition-colors ${value ? "bg-ink" : "bg-surface-mute"}`}
         />
         <span
           className={`absolute top-0.5 h-[27px] w-[27px] rounded-full bg-white shadow-chip transition-[left] ${
@@ -303,7 +304,7 @@ export function Toggle({
   );
 }
 
-/* ===== カラースウォッチ＋自由入力 ===== */
+/* ===== カラースウォッチ＋自由入力（色見本は丸で可） ===== */
 export function ColorField({
   value,
   onChange,
@@ -350,9 +351,9 @@ export function ColorField({
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setFocus(true)}
           onBlur={() => setFocus(false)}
-          placeholder={placeholder ?? "色名 or HEX（例: #007AFF）"}
-          className={`w-full rounded-xl bg-surface-soft px-3 py-2 text-[13px] text-ink placeholder:text-ink3 outline-none ${
-            focus ? "ring-2 ring-accent" : ""
+          placeholder={placeholder ?? "色名 or HEX（例: #0072F5）"}
+          className={`w-full rounded-md border border-line bg-surface px-3 py-2 text-[13px] text-ink placeholder:text-ink3 outline-none ${
+            focus ? "ring-2 ring-accent border-accent" : ""
           }`}
         />
       </div>

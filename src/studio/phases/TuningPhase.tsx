@@ -341,7 +341,7 @@ export function TuningPhase({ store, project, onToast }: PhaseProps) {
               type="button"
               onClick={handleSave}
               disabled={changes.length === 0 || saving}
-              className="rounded-full bg-accent px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
+              className="rounded-md bg-ink px-4 py-2 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
             >
               {saving ? "書き戻し中…" : `書き戻す${changes.length > 0 ? `（${changes.length}件）` : ""}`}
             </button>
@@ -349,15 +349,15 @@ export function TuningPhase({ store, project, onToast }: PhaseProps) {
               type="button"
               onClick={handleReset}
               disabled={changes.length === 0 || saving}
-              className="rounded-full bg-surface-soft px-4 py-2 text-[13px] text-ink2 transition-colors active:opacity-70 disabled:opacity-40"
+              className="rounded-md bg-surface-soft px-4 py-2 text-[13px] text-ink2 transition-colors active:opacity-70 disabled:opacity-40"
             >
               変更をリセット
             </button>
           </div>
 
           {savedHint ? (
-            <div className="mt-3 rounded-xl bg-accent-soft p-3">
-              <p className="text-[12px] font-bold text-accent">書き戻し完了</p>
+            <div className="mt-3 rounded-xl bg-good-bg p-3">
+              <p className="text-[12px] font-bold text-good">書き戻し完了</p>
               <p className="mt-0.5 text-[12px] text-ink2">
                 devサーバー起動中なら localhost:4321（npm run dev）で即反映される
               </p>
@@ -370,7 +370,7 @@ export function TuningPhase({ store, project, onToast }: PhaseProps) {
               <button
                 type="button"
                 onClick={copyDevCommand}
-                className="shrink-0 rounded-full bg-surface px-3 py-1 text-[12px] text-accent shadow-chip transition-colors active:opacity-70"
+                className="shrink-0 rounded-md bg-surface px-3 py-1 text-[12px] text-accent shadow-chip transition-colors active:opacity-70"
               >
                 コピー
               </button>

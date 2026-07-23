@@ -128,7 +128,7 @@ function ConceptCard({ c }: { c: DesignConcept }) {
       <p className="mb-1.5 mt-4 text-[11px] font-bold text-ink2">キーワード</p>
       <div className="flex flex-wrap gap-1.5">
         {c.keywords.map((k) => (
-          <span key={k} className="rounded-full bg-accent-soft px-3 py-1 text-[12px] font-bold text-accent">
+          <span key={k} className="rounded-md bg-surface-mute px-3 py-1 text-[12px] font-bold text-ink">
             {k}
           </span>
         ))}
@@ -175,7 +175,7 @@ function ContrastTable({ colors }: { colors: DesignSystemColors }) {
               {ratio === null ? "—" : `${ratio.toFixed(2)}:1`}（基準 {r.min}:1）
             </span>
             <span
-              className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-bold ${
+              className={`shrink-0 rounded-md px-2 py-0.5 text-[10px] font-bold ${
                 ok ? "bg-good-bg text-good" : "bg-bad-bg text-bad"
               }`}
             >
@@ -654,7 +654,7 @@ export function ConceptPhase({ store, project, onToast }: PhaseProps) {
                   onToast={onToast}
                   keyKind="gemini"
                 />
-                <label className="flex cursor-pointer items-center gap-1.5 rounded-full bg-surface-soft px-4 py-2.5 text-[13px] font-bold text-ink2 transition-colors active:opacity-70">
+                <label className="flex cursor-pointer items-center gap-1.5 rounded-md bg-surface-soft px-4 py-2.5 text-[13px] font-bold text-ink2 transition-colors active:opacity-70">
                   画像をアップロードして採用
                   <input
                     type="file"
@@ -704,7 +704,7 @@ export function ConceptPhase({ store, project, onToast }: PhaseProps) {
                         <button
                           type="button"
                           onClick={() => void adoptImage(img)}
-                          className="flex-1 bg-accent py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
+                          className="flex-1 bg-ink py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
                         >
                           採用
                         </button>
@@ -796,7 +796,7 @@ export function ConceptPhase({ store, project, onToast }: PhaseProps) {
                       type="button"
                       onClick={() => void saveTone()}
                       disabled={savingTone || Boolean(dsInvalid)}
-                      className="shrink-0 rounded-full bg-accent px-5 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
+                      className="shrink-0 rounded-md bg-ink px-5 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
                     >
                       {savingTone ? "書き出し中…" : "tone.md を書き出し"}
                     </button>

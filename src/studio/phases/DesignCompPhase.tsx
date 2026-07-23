@@ -399,7 +399,7 @@ export function DesignCompPhase({ store, project, onToast }: PhaseProps) {
                 onClick={() => {
                   cancelRef.current = true;
                 }}
-                className="rounded-full bg-surface-soft px-3 py-1.5 text-[12px] font-bold text-ink2 active:opacity-70"
+                className="rounded-md bg-surface-soft px-3 py-1.5 text-[12px] font-bold text-ink2 active:opacity-70"
               >
                 中断
               </button>
@@ -468,16 +468,16 @@ export function DesignCompPhase({ store, project, onToast }: PhaseProps) {
                 />
                 <span className="text-[14px] font-bold text-ink">{section.label}</span>
               </label>
-              <span className="rounded-full bg-surface-soft px-2 py-0.5 text-[11px] text-ink3">
+              <span className="rounded-md bg-surface-soft px-2 py-0.5 text-[11px] text-ink3">
                 {info?.id ?? section.key}
               </span>
               {adoptedCount > 0 && (
-                <span className="rounded-full bg-good-bg px-2 py-0.5 text-[11px] font-bold text-good">
+                <span className="rounded-md bg-good-bg px-2 py-0.5 text-[11px] font-bold text-good">
                   採用済み {adoptedCount}
                 </span>
               )}
               <div className="ml-auto flex items-center gap-2">
-                <label className="cursor-pointer rounded-full bg-surface-soft px-3 py-1.5 text-[12px] font-bold text-ink2 active:opacity-70">
+                <label className="cursor-pointer rounded-md bg-surface-soft px-3 py-1.5 text-[12px] font-bold text-ink2 active:opacity-70">
                   アップロード
                   <input
                     type="file"
@@ -516,14 +516,14 @@ export function DesignCompPhase({ store, project, onToast }: PhaseProps) {
                         <button
                           type="button"
                           onClick={() => void discard(section.key, cand)}
-                          className="rounded-full px-2.5 py-1 text-[11px] font-bold text-ink3 active:opacity-70"
+                          className="rounded-md px-2.5 py-1 text-[11px] font-bold text-ink3 active:opacity-70"
                         >
                           破棄
                         </button>
                         <button
                           type="button"
                           onClick={() => void adopt(section, cand)}
-                          className="rounded-full bg-accent px-3 py-1 text-[11px] font-bold text-white active:opacity-70"
+                          className="rounded-md bg-ink px-3 py-1 text-[11px] font-bold text-white active:opacity-70"
                         >
                           採用
                         </button>

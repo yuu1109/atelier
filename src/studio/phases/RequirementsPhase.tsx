@@ -584,7 +584,7 @@ export function RequirementsPhase({ store, project, onToast }: PhaseProps) {
               <button
                 type="button"
                 onClick={() => navigate({ kind: "settings" })}
-                className="shrink-0 rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
+                className="shrink-0 rounded-md bg-ink px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
               >
                 設定でキーを入れる
               </button>
@@ -608,7 +608,7 @@ export function RequirementsPhase({ store, project, onToast }: PhaseProps) {
                   type="button"
                   onClick={importPaste}
                   disabled={!paste.trim()}
-                  className="rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
+                  className="rounded-md bg-ink px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
                 >
                   取り込む
                 </button>
@@ -759,7 +759,7 @@ export function RequirementsPhase({ store, project, onToast }: PhaseProps) {
               <button
                 type="button"
                 onClick={() => up({ sections: [...form.sections, { name: "", reason: "" }] })}
-                className="rounded-full bg-surface-soft px-4 py-2 text-[12px] font-bold text-ink2 transition-colors active:opacity-70"
+                className="rounded-md bg-surface-soft px-4 py-2 text-[12px] font-bold text-ink2 transition-colors active:opacity-70"
               >
                 ＋ セクションを追加
               </button>
@@ -785,7 +785,7 @@ export function RequirementsPhase({ store, project, onToast }: PhaseProps) {
               type="button"
               onClick={() => void save()}
               disabled={saving}
-              className="shrink-0 rounded-full bg-accent px-5 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
+              className="shrink-0 rounded-md bg-ink px-5 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40"
             >
               {saving ? "保存中…" : "確定して保存"}
             </button>

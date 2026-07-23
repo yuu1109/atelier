@@ -36,7 +36,7 @@ npm run check    # 型チェック
 ## 構造
 
 - `src/lib/types.ts` — ToolDef 契約（フォームはスキーマ駆動で自動生成）
-- `src/components/` — hishoトーンのUI部品（白カード on #F2F2F7・LINE Seed JP・フラット第一）
+- `src/components/` — simple design system のUI部品（無彩色クローム・白地×ヘアライン・M PLUS 1p。正典: ../simple-design/DESIGN.md。旧hishoトーンへ戻す: git tag design-hisho-tone）
 - `src/tools/<id>/` — 各ツール定義（index.ts = ToolDef、data.ts = プリセット）
 - `src/studio/` — スタジオモード（案件パイプライン。契約は `docs/STUDIO.md`）
 - `docs/SPEC.md` — ツール実装の契約

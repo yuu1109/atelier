@@ -45,7 +45,7 @@ export function PromptPane({
           type="button"
           onClick={copy}
           disabled={built.text.trim() === ""}
-          className="flex items-center gap-1.5 rounded-full bg-accent px-4 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40 disabled:active:opacity-40"
+          className="flex items-center gap-1.5 rounded-md bg-ink px-4 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40 disabled:active:opacity-40"
         >
           <MdContentCopy size={15} />
           {copied ? "コピーした" : "コピー"}
@@ -55,7 +55,7 @@ export function PromptPane({
       {built.meta && built.meta.length > 0 ? (
         <div className="mb-3 flex flex-wrap gap-1.5">
           {built.meta.map((m) => (
-            <span key={m.label} className="rounded-full bg-surface-soft px-2.5 py-1 text-[11px] text-ink2">
+            <span key={m.label} className="rounded-md bg-surface-soft px-2.5 py-1 text-[11px] text-ink2">
               <span className="text-ink3">{m.label}</span> <span className="font-bold text-ink">{m.value}</span>
             </span>
           ))}

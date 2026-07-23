@@ -76,7 +76,7 @@ function ProjectWorkspace({
           <button
             type="button"
             onClick={() => navigate({ kind: "studio" })}
-            className="rounded-full bg-accent px-5 py-2.5 text-[13px] font-bold text-white active:opacity-70"
+            className="rounded-md bg-ink px-5 py-2.5 text-[13px] font-bold text-white active:opacity-70"
           >
             案件一覧へ
           </button>

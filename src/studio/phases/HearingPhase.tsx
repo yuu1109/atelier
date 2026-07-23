@@ -35,9 +35,9 @@ import {
 type TabId = "read" | "paste" | "form";
 
 const BTN_PRIMARY =
-  "rounded-full bg-accent px-4 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40";
+  "rounded-md bg-ink px-4 py-2.5 text-[13px] font-bold text-white transition-colors active:opacity-70 disabled:opacity-40";
 const BTN_GHOST =
-  "rounded-full bg-surface-soft px-4 py-2.5 text-[13px] font-bold text-ink2 transition-colors active:opacity-70 disabled:opacity-40";
+  "rounded-md bg-surface-soft px-4 py-2.5 text-[13px] font-bold text-ink2 transition-colors active:opacity-70 disabled:opacity-40";
 
 export function HearingPhase({ store, project, onToast }: PhaseProps) {
   const [tab, setTab] = useState<TabId>("read");
@@ -273,7 +273,7 @@ function PasteTab({
             <button
               type="button"
               onClick={() => navigate({ kind: "settings" })}
-              className="shrink-0 rounded-full bg-accent px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
+              className="shrink-0 rounded-md bg-ink px-4 py-2 text-[12px] font-bold text-white transition-colors active:opacity-70"
             >
               設定でキーを入れる
             </button>
