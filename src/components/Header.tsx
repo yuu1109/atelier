@@ -25,7 +25,7 @@ export function Header({
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "atelier-settings.json";
+    a.download = "SNSデザイン工場-settings.json";
     a.click();
     URL.revokeObjectURL(url);
     onToast("設定を書き出したよ");
@@ -45,9 +45,9 @@ export function Header({
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-bg/95 backdrop-blur-sm">
       <div className="mx-auto w-full max-w-6xl px-5 pb-3 pt-5">
-        <div className="mb-3 flex items-end justify-between">
+        <div className="mb-3 flex flex-wrap items-end justify-between gap-y-2">
           <div className="flex items-baseline gap-3">
-            <h1 className="text-[24px] font-bold tracking-tight text-ink">atelier.</h1>
+            <h1 className="text-[24px] font-bold tracking-tight text-ink">SNSデザイン工場</h1>
             <span className="hidden text-[12px] text-ink3 sm:inline">つくるための、プロンプト工房</span>
           </div>
           <div className="flex items-center gap-1">

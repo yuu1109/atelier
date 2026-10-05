@@ -472,7 +472,7 @@ export function buildStudioSpecMd(input: StudioSpecInput): string {
   md.push(
     `# ${siteName} 実装スペック`,
     "",
-    `clients/${project}/ の実装仕様書（atelier スタジオ生成）。この内容に従って site/ に静的サイトを実装する。`,
+    `clients/${project}/ の実装仕様書（SNSデザイン工場 スタジオ生成）。この内容に従って site/ に静的サイトを実装する。`,
     "",
     bullets([
       "情報の正典は3つ。事実・数字 = hearing.md / 構造とコピー = wireframe/wireframe-fixed.html / デザイン = tone.md",

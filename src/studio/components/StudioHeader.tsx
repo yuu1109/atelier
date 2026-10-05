@@ -34,14 +34,14 @@ export function StudioHeader({ crumbs }: { crumbs?: { label: string; route?: Rou
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-bg/95 backdrop-blur-sm">
       <div className="mx-auto w-full max-w-6xl px-5 pb-3 pt-5">
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex min-w-0 items-baseline gap-3">
             <button
               type="button"
               onClick={() => navigate({ kind: "studio" })}
-              className="text-[22px] font-bold tracking-tight text-ink active:opacity-70"
+              className="shrink-0 text-[22px] font-bold tracking-tight text-ink active:opacity-70"
             >
-              atelier.
+              SNSデザイン工場
             </button>
             {crumbs?.map((c, i) => (
               <span key={i} className="flex min-w-0 items-baseline gap-3">
