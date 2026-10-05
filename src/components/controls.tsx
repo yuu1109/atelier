@@ -97,11 +97,15 @@ export function Pills({
 function PresetSwatch({ preview }: { preview: NonNullable<Option["preview"]> }) {
   const [imgFailed, setImgFailed] = useState(false);
   const { image, colors, texture = "flat" } = preview;
+  // サブディレクトリ公開でも、同梱画像をアプリの公開先から読む。
+  const imageSrc = image?.startsWith("/style-previews/")
+    ? `${import.meta.env.BASE_URL}${image.slice(1)}`
+    : image;
 
   if (image && !imgFailed) {
     return (
       <span className="mb-2 block aspect-video w-full overflow-hidden rounded-lg border border-line bg-surface-mute">
-        <img src={image} alt="" className="h-full w-full object-cover" onError={() => setImgFailed(true)} />
+        <img src={imageSrc} alt="" className="h-full w-full object-cover" onError={() => setImgFailed(true)} />
       </span>
     );
   }
